@@ -2,7 +2,9 @@
 <html>
 <head>
 <title>Redirecting</title>
-<script> var random = new Array();
+</head>
+<body>
+  <script> var random = new Array();
 random[0]="https://google.com"
 random[1]="https://bing.com"
 random[2]="https://aol.com"
@@ -23,7 +25,5 @@ localStorage.randomState = JSON.stringify(state);
 location.href = page; 
 }; window.location.replace = random[nextPage()]
 </script>
-</head>
-<body>
 </body>
 </html>
