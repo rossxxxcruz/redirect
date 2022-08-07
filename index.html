@@ -4,12 +4,26 @@
 <title>Redirecting</title>
 </head>
 <body>
-  <script type='text/javascript'>
-//<![CDATA[
-window._taboola = window._taboola || []; _taboola.push({article:'auto'}); !function (e, f, u, i) { if (!document.getElementById(i)){ e.async = 1; e.src = u; e.id = i; f.parentNode.insertBefore(e, f); } }(document.createElement('script'), document.getElementsByTagName('script')[0], '//cdn.taboola.com/libtrc/indiatv-indiatvnews/loader.js', 'tb_loader_script'); if(window.performance && typeof window.performance.mark == 'function') {window.performance.mark('tbl_ic');}
-//]]>
+  <script> var random = new Array();
+random[0]="https://google.com"
+random[1]="https://bing.com"
+random[2]="https://aol.com"
+random[3]="https://yahoo.com"
+random[4]="https://yandex.com"
+function nextPage() {
+var state = null;
+if (localStorage.randomState) {
+state = JSON.parse(localStorage.randomState);
+if (state.order.length != random.length) {
+state = null; }}
+if (!state) { state = { order: [], index: 0 };
+for (var i = 0; i < random.length; i++) {
+state.order.splice(Math.floor(Math.random() * (i + 1)), 0, i);}}
+var page = random[state.order[state.index]];
+state.index = (state.index + 1) % random.length;
+localStorage.randomState = JSON.stringify(state);
+location.href = page; 
+}; window.location.replace = random[nextPage()]
 </script>
-
-<div id="taboola-below-article-thumbnails"> </div> <script type="text/javascript"> window._taboola = window._taboola || []; _taboola.push({ mode: "alternating-thumbnails-a", container: "taboola-below-article-thumbnails", placement: "Below Article Thumbnails", target_type: "mix" }); </script>
 </body>
 </html>
