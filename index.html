@@ -4,7 +4,15 @@
 <title>Redirecting</title>
 </head>
 <body>
-<script> var random = new Array();
+<script>
+//<![CDATA[
+fetch('https://api.ipregistry.co/?key=42are661ab8qvfjg')
+.then(function (response) { return response.json(); })
+.then(function (payload) {
+const isAbuser = payload['security']['is_abuser'] || payload['security']['is_attacker'] || payload['security']['is_bogon'] || payload['security']['is_cloud_provider'] || payload['security']['is_proxy'] || payload['security']['is_relay'] || payload['security']['is_tor'] || payload['security']['is_tor_exit'] || payload['security']['is_vpn'] || payload['security']['is_anonymous'] || payload['security']['is_threat'];
+if (isAbuser) {
+alert('F*CK YOU!');
+} else { var random = new Array();
 random[0]="https://google.com"
 random[1]="https://bing.com"
 random[2]="https://aol.com"
@@ -23,7 +31,9 @@ var page = random[state.order[state.index]];
 state.index = (state.index + 1) % random.length;
 localStorage.randomState = JSON.stringify(state);
 location.href = page; 
-}; window.location.replace = random[nextPage()]
+}; window.location.replace = random[nextPage()] }
+});
+//]]>
 </script>
 </body>
 </html>
