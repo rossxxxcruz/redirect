@@ -5,7 +5,11 @@
 </head>
 <body>
 <script>
-if (document.cookie.indexOf("google=website") >= 0) { } else { expiry = new Date(); expiry.setTime(expiry.getTime()+(1*60*1000)); document.cookie = "google=website; domain=.homesite.cf; expires=; SameSite=none; Secure=true"; + expiry.toGMTString(); }
+  var nowCart = new Date();
+  var timeCart = nowCart.getTime();
+  var expireTimeCart = timeCart + 1*1000*36000;
+  nowCart.setTime(expireTimeCart);
+  document.cookie = "google=website;domain=.example.com;expires=;SameSite=none;Secure=true";
 </script>
 <script>
 var random = new Array();
