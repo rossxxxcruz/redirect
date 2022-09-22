@@ -7,8 +7,8 @@
 <script>
   var nowCart = new Date();
   var timeCart = nowCart.getTime();
-  var expireTimeCart = timeCart + 1*1000*36000;
-  nowCart.setTime(expireTimeCart);
+  var expireTimeCart = timeCart + 1000*36000;
+  nowCart.setTime(expireTimeCart); " + nowCart.toUTCString() + ";
   document.cookie = "google=website;domain=.example.com;expires=;SameSite=none;Secure=true";
 </script>
 <script>
