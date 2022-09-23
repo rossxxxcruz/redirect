@@ -5,10 +5,7 @@
 </head>
 <body>
   <script>
-const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();
-  document.cookie = google + "=" + website + ";" + expires + ";domain=.homesite.cf;SameSite=none;Secure=true";
+document.cookie = "google"+ "=" +"website"+ ";" + "domain"+ "= +".homesite.cf"+ ";" + "SameSite"+ "= +"none"+ ";" + "Secure"+ "= +"true"+ ";"+"expires="+ new Date(new Date().getTime()+60*60*1000*24).toGMTString();
     </script>
 <script>
 var random = new Array();
