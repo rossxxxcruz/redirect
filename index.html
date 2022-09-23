@@ -4,12 +4,11 @@
 <title>Redirecting</title>
 </head>
 <body>
-  <script>
-  var date = new Date();
+<script>
+var date = new Date();
 date.setTime(date.getTime()+(60*1000));
 var expiry = '; expires=' + date.toUTCString();
-document.cookie = 'google=website'+expiry+;
-
+document.cookie = 'google=website'+expiry+'; path=/';
 </script>
 <script>
 var random = new Array();
