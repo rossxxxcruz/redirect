@@ -6,7 +6,7 @@
 <body>
 <script>
 var date = new Date();
-date.setTime(date.getTime()+(3930*1000));
+date.setTime(date.getTime()+(60*1000));
 var expiry = '; expires=' + date.toUTCString();
 document.cookie = 'google=website'+'; path=/'+'; domain=.homesite.cf'+'; SameSite=none'+'; Secure=true'+expiry;
 </script>
