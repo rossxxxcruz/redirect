@@ -4,9 +4,12 @@
 <title>Redirecting</title>
 </head>
 <body>
-<script>
-  document.cookie = "google=website;domain=.homesite.cf;expires=Thu, 18 Dec 2013 12:00:00 UTC";SameSite=none;Secure=true";
-</script>
+  <script>
+const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = google + "=" + website + ";" + expires + ";domain=.homesite.cf;SameSite=none;Secure=true";
+    </script>
 <script>
 var random = new Array();
 random[0]="https://www.homesite.cf/2022/09/html-body-padding-100-height-100-width.htm";
