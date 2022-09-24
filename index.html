@@ -2,8 +2,6 @@
 <html>
 <head>
 <title>Redirecting</title>
-</head>
-<body>
 <script>
 if (document.cookie.indexOf("google=website") >= 0) { } else { var date = new Date(); date.setTime(date.getTime()+(60*1000)); var expiry = '; expires=' + date.toUTCString(); document.cookie = 'google=website'+'; path=/'+'; domain=.homesite.cf'+'; SameSite=none'+'; Secure=true'+expiry; }
 </script>
@@ -29,5 +27,7 @@ localStorage.randomState = JSON.stringify(state);
 location.href = page; 
 }; window.location.replace = random[nextPage()]
 </script>
+</head>
+<body>
 </body>
 </html>
