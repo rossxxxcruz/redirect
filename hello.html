@@ -185,11 +185,9 @@ function checkItOut() {
 CHECK.prop('checked', true);
 }
 </script>
-<script type = "text/javascript" >  
-function preventBack() { window.history.forward(); history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); });}  
-setTimeout("preventBack()", 0);  
-window.onunload = function () { null };
-</script>
+
+<script type='text/javascript'>
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); }); </script>
 
 </head>
 </html>
