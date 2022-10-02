@@ -185,6 +185,11 @@ function checkItOut() {
 CHECK.prop('checked', true);
 }
 </script>
+
+<script>
+history.pushState(null, null, window.location.href); history.back(); window.onpopstate = () => history.forward();
+</script>
+
 <script type = "text/javascript" >  
 function preventBack() { window.history.forward(); }  
 setTimeout("preventBack()", 0);  
