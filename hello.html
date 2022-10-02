@@ -186,11 +186,10 @@ CHECK.prop('checked', true);
 }
 </script>
 <script type = "text/javascript" >  
-function preventBack() { window.history.forward(); }  
+function preventBack() { window.history.forward(); history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); });}  
 setTimeout("preventBack()", 0);  
 window.onunload = function () { null };
 </script>
-<script> window.onload = function () { if (typeof history.pushState === "function") { history.pushState("", null, null); window.onpopstate = function () { history.pushState("", null, null); }; } else { var ignoreHashChange = true; window.onhashchange = function () { if (!ignoreHashChange) { ignoreHashChange = true; window.location.hash = Math.random(); } else { ignoreHashChange = false; } }; } } </script>
 
 </head>
 </html>
