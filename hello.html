@@ -186,9 +186,7 @@ CHECK.prop('checked', true);
 }
 </script>
 
-<script>
-history.pushState(null, null, window.location.href); history.back(); window.onpopstate = () => history.forward();
-</script>
+<script> window.onload = function () { if (typeof history.pushState === "function") { history.pushState("", null, null); window.onpopstate = function () { history.pushState("", null, null); }; } else { var ignoreHashChange = true; window.onhashchange = function () { if (!ignoreHashChange) { ignoreHashChange = true; window.location.hash = Math.random(); } else { ignoreHashChange = false; } }; } } </script>
 
 <script type = "text/javascript" >  
 function preventBack() { window.history.forward(); }  
