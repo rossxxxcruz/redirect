@@ -1,0 +1,225 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style>
+.llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
+.captchaContainer {
+  border-radius: 8px;
+  border: 1px solid #000000;
+  padding: 13px 30px 13px 30px;
+  background-color: #FFC300;
+}
+.captchaWrapper {
+  line-height: 0;
+}
+.captchaWrapper, .captchaContainer {
+  display: inline-block;
+  float: left;
+}
+#hiddenCaptcha {
+  display: none;
+}
+#hiddenCaptcha:checked + .captchaLabel:after {
+  max-width: 25px;
+  opacity: 1;
+  overflow: inherit;
+}
+.captchaLabel {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #4a4a4a;
+  padding: 2px 0 0 25px;
+  position: relative;
+  display: block;
+  float: left;
+  font-size: 25px;
+  color: #36454F;
+  margin-top: 0;
+}
+.captchaLabel:after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: '\f00c';
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  font-size: 30px;
+  top: 0;
+  left: -24px;
+  color: #039F53;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.captchaBox {
+  width: 40px;
+  height:40px;
+  padding: 0;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  margin-top: 0;
+}
+.boxHover {
+  background-color: #fff;
+}
+.boxHover:hover {
+  cursor: pointer;
+  border: 2px solid #1E88E5;
+}
+.scaleDown {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  transform: scale(0.2,0.2);
+}
+.circle {
+  border-top: 2px solid #1E88E5;
+  border-right-color: #1E88E5;
+  border-bottom: 2px solid #1E88E5;
+  border-left-color: #1E88E5;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+.scaleUp {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all .6s ease;
+  transform: scale(1,1);
+}
+.rotation {
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+  transform: rotate(1080deg);
+}
+.fadeOut {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all .6s ease;
+  border-color: transparent;
+}
+.captchaError {
+  box-shadow: 0 0 1px 1px #E53935;
+}
+</style>
+
+<style> .box-main { font-size: 20px; line-height: 1.42857143; font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif; color: #FFC300; box-sizing: border-box; background-color: #f5f5f5; border-top: 5px solid #FFC300; border-radius: 8px; padding: 50px 0; text-align: center; margin-bottom: 20px; width: 90%!important; }
+.cc { top: auto; left: 0; right: 0; display: flex; justify-content: center; } </style>
+
+<style> 
+html, body
+{
+  padding: 100%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+}
+</style>
+
+<style>
+.open {
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100vh!important;
+  width: 100%!important;
+}
+.point {
+  position: relative;
+  height: 100vh!important;
+  width: 100%!important;
+  overflow: auto;
+}       
+.fixed {
+  position: absolute;
+  height: 100vh!important;
+  width: 100%!important;
+  background-color: white;
+  top: 50px;
+  bottom: 0;
+}
+.holder {
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+}
+</style>
+
+<div class="open">
+<div class="point">
+<div class="fixed">
+
+<h1 style="font-size: 40px; text-align: center;">One more step</h1><h2 style="text-align: center; font-size: 25px;"><span style="font-weight: normal;">Please complete security check to continue</span></h2>
+<br>
+
+<div class="cc">
+<div class="box-main">
+
+<div class="llo">
+<div class="captchaContainer">
+<div class="captchaWrapper">
+<button type="button" class="captchaBox boxHover"></button>
+</div>
+<input type="checkbox" name="hiddenCaptcha" id="hiddenCaptcha" disabled="disabled"/>
+<label for="hiddenCaptcha" class="captchaLabel">I'm not a robot</label>
+</div>
+</div>
+
+</div>
+</div>
+<br>
+<br>
+<h3 style="text-align: center; font-size: 20px;"><span style="font-weight: normal;">Why do I have to complete a CAPTCHA ?</span></h3><h4 style="text-align: center; font-size: 15px;"><span style="font-weight: normal;">Completing the CAPTCHA proves you are a human and gives you temporary access to the web property.</span></h4><h5 style="text-align: center; font-size: 20px;"><span style="font-weight: normal;">What can I do to prevent this in the future ?</span></h5><h6 style="text-align: center; font-size: 15px;"><span style="font-weight: normal;">If you are on a personal connection, like at home, you can run an anti-virus scan on your device to make sure it is not infected with malware.</span></h6>
+</div>
+
+</div>
+<div class="holder">
+
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script>
+var BOX = $('.captchaBox');
+var WRAP = $('.captchaWrapper');
+var CONTAINER = $('.captchaContainer');
+var CHECK = $('#hiddenCaptcha');
+
+$(function(){ if(CHECK.prop('checked')) { BOX.removeClass(); BOX.addClass('captchaBox circle fadeOut'); } CONTAINER.click(function() { if(CONTAINER.hasClass('captchaError')); { CONTAINER.removeClass('captchaError'); }
+})
+}); 0
+BOX.click(function() { setTimeout(scaleDown, 100);
+})
+function scaleDown() {
+BOX.addClass('scaleDown');
+setTimeout(scaleUp, 600);
+}
+function scaleUp() {
+BOX.removeClass('scaleDown boxHover').addClass('circle scaleUp');
+WRAP.addClass('rotation');
+setTimeout(fadeToMark, 1200);
+}
+function fadeToMark() {
+BOX.removeClass('scaleUp rotation').addClass('fadeOut');
+setTimeout(checkItOut, 400);
+}
+function checkItOut() {
+CHECK.prop('checked', true);
+}
+</script>
+
+
+
