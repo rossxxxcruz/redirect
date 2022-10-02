@@ -185,6 +185,7 @@ function checkItOut() {
 CHECK.prop('checked', true);
 }
 </script>
-
+<script type='text/javascript'>
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); }); </script>
 </head>
 </html>
