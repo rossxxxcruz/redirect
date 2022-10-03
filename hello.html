@@ -4,24 +4,17 @@
 <meta content='notranslate' name='google'/>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <head>
-</head>
-
 <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'/>
-
 <style>
 html, body { font-family: 'Allerta', serif!important; }
 </style>
-
+</head>
 <body>
-
-<style> .box-main { width: 90%!important; font-size: 20px; line-height: 1.42857143; font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif; color: #93C572; box-sizing: border-box; background-color: #f5f5f5; border-top: 5px solid #93C572; border-radius: 8px; padding: 50px 0; text-align: center; margin-bottom: 20px; } .cc { top: auto; left: 0; right: 0; display: flex; justify-content: center; } </style>
-
 <h1 style="font-size: 40px; width: 90%; margin-left: auto; margin-right: auto; text-align: center;">One more step</h1><h2 style="text-align: center; width: auto; margin-left: auto; margin-right: auto; font-size: 25px;"><span style="font-weight: normal;">Please complete security check to continue</span></h2>
 <br>
 <br>
 <div class="cc">
 <div class="box-main">
-
 <div class="llo">
 <div class="captchaContainer">
 <div class="captchaWrapper">
@@ -31,10 +24,16 @@ html, body { font-family: 'Allerta', serif!important; }
 <label for="hiddenCaptcha" class="captchaLabel">I'm not a robot</label>
 </div>
 </div>
-
 </div>
 </div>
-
+<br>
+<br>
+<h3 style="text-align: center; width: 90%; margin-left: auto; margin-right: auto; font-size: 20px;"><span style="font-weight: normal;">Why do I have to complete a CAPTCHA ?</span></h3><h4 style="text-align: center; width: 90%; margin-left: auto; margin-right: auto; font-size: 15px;"><span style="font-weight: normal;">Completing the CAPTCHA proves you are a human and gives you temporary access to the web property.</span></h4><h5 style="text-align: center; width: 90%; margin-left: auto; margin-right: auto; font-size: 20px;"><span style="font-weight: normal;">What can I do to prevent this in the future ?</span></h5><h6 style="text-align: center; width: 90%; margin-left: auto; margin-right: auto; font-size: 15px;"><span style="font-weight: normal;">If you are on a personal connection, like at home, you can run an anti-virus scan on your device to make sure it is not infected with malware.</span></h6>
+<h1></h1>
+<hr />
+<br>
+<br>
+<style> .box-main { width: 90%!important; font-size: 20px; line-height: 1.42857143; font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif; color: #93C572; box-sizing: border-box; background-color: #f5f5f5; border-top: 5px solid #93C572; border-radius: 8px; padding: 50px 0; text-align: center; margin-bottom: 20px; } .cc { top: auto; left: 0; right: 0; display: flex; justify-content: center; } </style>
 <style>
 .llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
 .captchaContainer {
@@ -141,33 +140,14 @@ html, body { font-family: 'Allerta', serif!important; }
   box-shadow: 0 0 1px 1px #93C572;
 }
 </style>
-
-<br>
-<br>
-
-<h3 style="text-align: center; width: 90%; margin-left: auto; margin-right: auto; font-size: 20px;"><span style="font-weight: normal;">Why do I have to complete a CAPTCHA ?</span></h3><h4 style="text-align: center; width: 90%; margin-left: auto; margin-right: auto; font-size: 15px;"><span style="font-weight: normal;">Completing the CAPTCHA proves you are a human and gives you temporary access to the web property.</span></h4><h5 style="text-align: center; width: 90%; margin-left: auto; margin-right: auto; font-size: 20px;"><span style="font-weight: normal;">What can I do to prevent this in the future ?</span></h5><h6 style="text-align: center; width: 90%; margin-left: auto; margin-right: auto; font-size: 15px;"><span style="font-weight: normal;">If you are on a personal connection, like at home, you can run an anti-virus scan on your device to make sure it is not infected with malware.</span></h6>
-<style>
-      hr {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
-    <h1></h1>
-    <hr />
-  <br>
-  <br>
-
+<style> hr { width: 90%; margin-left: auto; margin-right: auto; } </style>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
 <script>
 var BOX = $('.captchaBox');
 var WRAP = $('.captchaWrapper');
 var CONTAINER = $('.captchaContainer');
 var CHECK = $('#hiddenCaptcha');
-
 $(function(){ if(CHECK.prop('checked')) { BOX.removeClass(); BOX.addClass('captchaBox circle fadeOut'); } CONTAINER.click(function() { if(CONTAINER.hasClass('captchaError')); { CONTAINER.removeClass('captchaError'); }
 })
 }); 0
@@ -190,12 +170,10 @@ function checkItOut() {
 CHECK.prop('checked', true);
 }
 </script>
-
 <script type = "text/javascript" >  
 function preventBack() { window.history.forward(); }  
 setTimeout("preventBack()", 0);  
 window.onunload = function () { null };
 </script>
-
 </body>
 </html>
