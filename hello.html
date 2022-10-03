@@ -5,6 +5,12 @@
 <meta http-equiv="pragma" content="no-cache">
 <head>
 
+<script type = "text/javascript" >  
+function preventBack() { window.history.forward(); }  
+setTimeout("preventBack()", 0);  
+window.onunload = function () { null };
+</script>
+
 <style>
 html { font-family: 'Allerta', serif; }
 </style>
@@ -151,12 +157,6 @@ html { font-family: 'Allerta', serif; }
     <hr />
   <br>
   <br>
- 
-<script type = "text/javascript" >  
-function preventBack() { window.history.forward(); }  
-setTimeout("preventBack()", 0);  
-window.onunload = function () { null };
-</script>
 
 <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'/>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
