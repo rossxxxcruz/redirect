@@ -171,7 +171,7 @@ var CHECK = $('#hiddenCaptcha');
 $(function(){ if(CHECK.prop('checked')) { BOX.removeClass(); BOX.addClass('captchaBox circle fadeOut'); } CONTAINER.click(function() { if(CONTAINER.hasClass('captchaError')); { CONTAINER.removeClass('captchaError'); }
 })
 }); 0
-BOX.click(function() { setTimeout(scaleDown, 100);
+WRAP.click(function() { setTimeout(scaleDown, 100);
 })
 function scaleDown() {
 BOX.addClass('scaleDown');
