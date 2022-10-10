@@ -169,9 +169,9 @@ let userValue = document.getElementById("entered-captcha").value;
 console.log(captcha);
 console.log(userValue);
 if(userValue == captcha){
-    status.innerText = "Correct!!"
+    status.innerText = "Correct ✅"
 }else{
-    status.innerText = "Try Again!!"
+    status.innerText = "Try Again ⚠️"
     document.getElementById("entered-captcha").value = '';
 }
 }
