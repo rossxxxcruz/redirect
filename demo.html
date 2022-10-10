@@ -10,7 +10,7 @@
 <body onload="generate()">
   
     <div class="wrapper"></div>
-    <h2 id="status" style="color: #ee7e6a;"></h2>
+    <h2 id="status" style="color: #000000;"></h2>
     <div>
         <input type="text" readonly id="generated-captcha">
     </div>
@@ -54,7 +54,10 @@
 #status { font-size: 25px;
   font-family: monospace;
   font-weight: bold;
-  
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
   margin-bottom: 15px;
   letter-spacing: 1px;
   }
