@@ -29,6 +29,27 @@
 </body>
 
 <style>
+    ::placeholder {
+   text-align: center; 
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
 body {
   display: flex;
   justify-content: center;
@@ -71,7 +92,7 @@ input {
   font-family: monospace;
   outline: none;
   border-radius: 6px;
-  height: 50px!important;
+  height: 48px!important;
   width: 270px!important;
   font-size: 12px;
   letter-spacing: 1px;
