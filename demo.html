@@ -8,8 +8,7 @@
 
 </head>
 <body onload="generate()">
-    <h1 style="font-size: 40px; text-align: center;">One more step</h1><h2 style="text-align: center; font-size: 25px;"><span style="font-weight: normal;">Please complete security check to continue</span></h2>
-<br>
+  
     <div class="wrapper"></div>
     <h2 id="status" style="color: #ee7e6a;"></h2>
     <div>
@@ -137,7 +136,7 @@ let captcha;
 let alphabets = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 console.log(alphabets.length);
 let status = document.getElementById('status');
-status.innerText = "Captcha Generator";
+status.innerText = "One more step";
 
  generate = () => {
 // console.log(status)
@@ -151,8 +150,7 @@ captcha = first.toString()+second.toString()+third.toString()+fourth.toString()+
 console.log(captcha);
 document.getElementById('generated-captcha').value = captcha;
 document.getElementById("entered-captcha").value = '';
-status.innerText = "One more step
-     Please complete captcha to continue"
+status.innerText = "One more step"
 }
 
  check = () => {
