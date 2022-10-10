@@ -1,0 +1,87 @@
+
+
+
+<script>
+ 
+  
+$('.bot').on('click',function(e){
+    $(this).find('i').addClass('fa-check-circle');
+  $(this).addClass('chk');
+    $(this).find('i').removeClass('fa-circle');
+    $(this).css('pointer-events','none');
+  
+  
+});
+</script>
+
+<style>
+  
+  .bot{
+    color: #999 !important;
+    border: 0px solid #ddd !important;
+    background:#ddd;
+    overflow:hidden;
+    display:inline-block;
+    width:140px;
+    white-space:nowrap;
+    text-align:left;
+    border-radius:20px;
+    transition:all 0.2s
+}
+.bot i {
+    font-size: 32px;
+    vertical-align: middle;
+    transform: rotate(90deg);
+    transition: all 0.4s
+}
+.bot:hover i, .bot:hover span{
+    color:#678
+}
+.bot .fa-check-circle {
+    color: #5bc0de !important;
+    transform: rotate(0deg);
+}
+.bot span{
+    font-size:14px;
+    padding:0  0 0 10px;
+    display:inline-block;
+    text-shadow:0 1px 0 #fff;
+}
+.bot.chk{
+    width:28px;
+    background:#fff
+}
+.shake {
+    transform-origin: center;
+    animation-name: shake;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out
+}
+@keyframes slidedown{
+  0%{ max-height:0px;opacity:0}
+  100%{ max-height:600px;opacity:1}
+}
+@keyframes shake {
+      0% {transform: none }
+12.5% {transform: translateX(-6px) rotateY(-5deg) }
+37.5% {transform: translateX(5px) rotateY(4deg) }
+62.5% {transform: translateX(-3px) rotateY(-3deg) }
+ 87.5% {transform: translateX(2px) rotateY(2deg) }
+ 100% {transform: none }
+}
+
+
+
+</style>
+
+
+<div class="form-group">
+              <a  class="bot"><i class="fa fa-circle"></i><span>I'm not a Bot</span></a>
+            </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
+
+
+
+
