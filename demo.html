@@ -51,7 +51,7 @@
 :-ms-input-placeholder {  
    text-align: center; 
 }
-#status { font-size: 30px;
+#status { font-size: 25px;
   font-family: monospace;
   font-weight: bold;
   clear: both;
@@ -160,7 +160,7 @@ captcha = first.toString()+second.toString()+third.toString()+fourth.toString()+
 console.log(captcha);
 document.getElementById('generated-captcha').value = captcha;
 document.getElementById("entered-captcha").value = '';
-status.innerText = "One more step"
+status.innerText = "Please complete security check to continue"
 }
 
  check = () => {
