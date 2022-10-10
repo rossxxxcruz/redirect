@@ -146,7 +146,7 @@ let captcha;
 let alphabets = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 console.log(alphabets.length);
 let status = document.getElementById('status');
-status.innerText = "One more step"
+status.innerText = ""
 
  generate = () => {
 // console.log(status)
@@ -160,7 +160,7 @@ captcha = first.toString()+second.toString()+third.toString()+fourth.toString()+
 console.log(captcha);
 document.getElementById('generated-captcha').value = captcha;
 document.getElementById("entered-captcha").value = '';
-status.innerText = "Please complete security check to continue"
+status.innerText = ""
 }
 
  check = () => {
