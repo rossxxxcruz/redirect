@@ -136,7 +136,7 @@ let captcha;
 let alphabets = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 console.log(alphabets.length);
 let status = document.getElementById('status');
-status.innerText = "One more step";
+status.document.write("One more step")
 
  generate = () => {
 // console.log(status)
@@ -150,7 +150,7 @@ captcha = first.toString()+second.toString()+third.toString()+fourth.toString()+
 console.log(captcha);
 document.getElementById('generated-captcha').value = captcha;
 document.getElementById("entered-captcha").value = '';
-status.innerText = "One more step"
+status.document.write("One more step")
 }
 
  check = () => {
