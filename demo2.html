@@ -165,21 +165,9 @@ var CHECK = $('#hiddenCaptcha');
 $(function(){ if(CHECK.prop('checked')) { BOX.removeClass(); BOX.addClass('captchaBox circle fadeOut'); } CONTAINER.click(function() { if(CONTAINER.hasClass('captchaError')); { CONTAINER.removeClass('captchaError'); }
 })
 }); 0
-CONTAINER.click(function() { BOX.addClass('scaleDown'); CHECK.prop('checked', true); setTimeout(scaleDown, 100);
+CONTAINER.click(function() { BOX.addClass('scaleDown'); BOX.removeClass('scaleUp rotation').addClass('fadeOut'); CHECK.prop('checked', true); setTimeout(scaleDown, 100);
 })
-function scaleDown() {
-BOX.addClass('scaleDown');
-setTimeout(scaleUp, 600);
-}
-function scaleUp() {
-BOX.removeClass('scaleDown boxHover').addClass('circle scaleUp');
-WRAP.addClass('rotation');
-setTimeout(fadeToMark, 1200);
-}
-function fadeToMark() {
-BOX.removeClass('scaleUp rotation').addClass('fadeOut');
-setTimeout(checkItOut, 400);
-}
+
 
 </script>
 
