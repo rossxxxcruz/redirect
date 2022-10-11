@@ -2,7 +2,8 @@
     var a = Math.floor(Math.random() * 10) + 1;
     var b = Math.floor(Math.random() * 10) + 1;
     var op = ["+", "+", "+", "+"][Math.floor(Math.random()*4)];
- window.addEventListener('load', function() {
+ }
+window.addEventListener('load', function() {
   return prompt("How much is " + a + " " + op + " " + b + " " + "?") == eval( a + op + b);
      var questions = [ask()],
     total = questions.length,
@@ -12,8 +13,6 @@ alert( "You got "+correct+"/"+total+" correctly");
 
 if (correct >= '1') { alert('ok') };
 })
- }
-
 </script>
 
 
