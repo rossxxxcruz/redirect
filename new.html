@@ -4,16 +4,15 @@
     var op = ["+", "+", "+", "+"][Math.floor(Math.random()*4)];
  window.addEventListener('load', function() {
   return prompt("How much is " + a + " " + op + " " + b + " " + "?") == eval( a + op + b);
-})
- }
-
-var questions = [ask()],
+     var questions = [ask()],
     total = questions.length,
     correct = questions.filter(Boolean).length;
 
 alert( "You got "+correct+"/"+total+" correctly"); 
 
 if (correct >= '1') { alert('ok') };
+})
+ }
 
 </script>
 
