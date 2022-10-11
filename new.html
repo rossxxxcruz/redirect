@@ -2,16 +2,16 @@
     var a = Math.floor(Math.random() * 10) + 1;
     var b = Math.floor(Math.random() * 10) + 1;
     var op = ["+", "+", "+", "+"][Math.floor(Math.random()*4)];
-    return prompt("How much is " + a + " " + op + " " + b + " " + "?") == eval( a + op + b);
+    return prompt("HOW MUCH IS " + a + " " + op + " " + b + " " + "?") == eval( a + op + b);
 }
 
 var questions = [ask()],
     total = questions.length,
     correct = questions.filter(Boolean).length;
 
-alert( "You got "+correct+"/"+total+" correctly"); 
+alert( "YOU GOT "+correct+"/"+total+" CORRECTLY"); 
 
-if (correct >= '1') { alert('ok') } else { alert('no') }; }, 100)
+if (correct >= '1') { alert('OK') } else { alert('NO') }; }, 100)
 
 </script>
 
