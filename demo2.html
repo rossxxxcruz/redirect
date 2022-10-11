@@ -14,57 +14,147 @@
     <div class="wrapper">
   <h3 style="font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; font-size: 40px; width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 5px!important; text-align: center; letter-spacing: 1px;"><span style="font-weight: bold;">One more step</span></h3><h4 style="font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; text-align: center; width: auto; margin-left: auto; margin-right: auto; margin-top: 5px!important; margin-bottom: 5px!important; font-size: 25px; letter-spacing: 1px;"><span style="font-weight: normal;">Please complete security check to continue</span></h4>
 
-    <h2 id="status" style="color: #000000;"></h2>
-    <div>
-        <input type="text" readonly id="generated-captcha">
-    </div>
-    
-    <div>
-        <input type="text" id="entered-captcha" placeholder="Enter the captcha..">
-    </div>
-    
-    <button type="button" onclick="check()">
-        Check Answer
-    </button>
-    
-    <button type="button" onclick="generate()" id="gen">
-        Generate New
-    </button>
+  <style>
+.llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
+.captchaContainer {
+  border-radius: 3px;
+  border: 1px solid #000000;
+  padding: 10px 20px 10px 20px;
+  background-color: #93C572;
+}
+.captchaWrapper {
+  line-height: 0;
+}
+.captchaWrapper, .captchaContainer {
+  display: inline-block;
+  float: left;
+}
+#hiddenCaptcha {
+  display: none;
+}
+#hiddenCaptcha:checked + .captchaLabel:after {
+  max-width: 25px;
+  opacity: 1;
+  overflow: inherit;
+}
+.captchaLabel {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  padding: 2px 0 0 15px;
+  position: relative;
+  display: block;
+  float: left;
+  font-size: 25px;
+  color: #343434;
+  margin-top: 0;
+}
+.captchaLabel:after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: '\f00c';
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  font-size: 30px;
+  top: 0;
+  left: -24px;
+  color: #039F53;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.captchaBox {
+  width: 30px;
+  height:30px;
+  padding: 0;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  margin-top: 4.5px;
+}
+.boxHover {
+  background-color: #fff;
+}
+.boxHover:hover {
+  cursor: pointer;
+  border: 2px solid #000000;
+}
+.scaleDown {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  transform: scale(0.2,0.2);
+}
+.circle {
+  border-top: 2px solid #000000;
+  border-right-color: #000000;
+  border-bottom: 2px solid #000000;
+  border-left-color: #000000;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+.scaleUp {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all .6s ease;
+  transform: scale(1,1);
+}
+.rotation {
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+  transform: rotate(1080deg);
+}
+.fadeOut {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all .6s ease;
+  border-color: transparent;
+}
+.captchaError {
+  box-shadow: 0 0 1px 1px #93C572;
+}
+</style>
+<style> .line { width:90%; height:1px; background: #000000; margin-left: auto; margin-right: auto; margin-bottom: 90px!important; } </style>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+var BOX = $('.captchaBox');
+var WRAP = $('.captchaWrapper');
+var CONTAINER = $('.captchaContainer');
+var CHECK = $('#hiddenCaptcha');
+$(function(){ if(CHECK.prop('checked')) { BOX.removeClass(); BOX.addClass('captchaBox circle fadeOut'); } CONTAINER.click(function() { if(CONTAINER.hasClass('captchaError')); { CONTAINER.removeClass('captchaError'); }
+})
+}); 0
+CONTAINER.click(function() { setTimeout(scaleDown, 100);
+})
+function scaleDown() {
+BOX.addClass('scaleDown');
+setTimeout(scaleUp, 600);
+}
+function scaleUp() {
+BOX.removeClass('scaleDown boxHover').addClass('circle scaleUp');
+WRAP.addClass('rotation');
+setTimeout(fadeToMark, 1200);
+}
+function fadeToMark() {
+BOX.removeClass('scaleUp rotation').addClass('fadeOut');
+setTimeout(checkItOut, 400);
+}
+function checkItOut() {
+CHECK.prop('checked', true);
+}
+</script>
 </div>
 </body>
 
 <style>
-    ::placeholder {
-   text-align: center; 
-}
 
-/* or, for legacy browsers */
-
-::-webkit-input-placeholder {
-   text-align: center;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   text-align: center;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   text-align: center;  
-}
-
-:-ms-input-placeholder {  
-   text-align: center; 
-}
-#status { font-size: 15px;
-  font-family: monospace;
-  font-weight: normal;
-  clear: both;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-  }
 html, body {
   display: flex;
   justify-content: center;
@@ -78,110 +168,8 @@ html, body {
   background-attachment: fixed;
   background-size: cover;
 }
-div {
-  margin-bottom: 10px;
-}
-button {
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-input {
-  text-decoration: none;
-    text-align: center; 
-}
-#generated-captcha {
-  
-  font-weight: bold;
-  text-align: center;
-  font-size: 20px;
-  background-color: #ede7f6;
-  border-radius: 6px;
-  border: none;
-  height: 50px!important;
-  width: 270px!important;
-  outline: none;
-  color: #1d1d1d;
-  margin-bottom: 10px;
-}
-#entered-captcha {
-  border: 2px solid #c5c7f7;
-  font-family: monospace;
-  outline: none;
-  border-radius: 6px;
-  height: 48px!important;
-  width: 270px!important;
-  font-size: 12px;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-button {
-  border: none;
-  height: 50px!important;
-  width: 280px!important;
-  border-radius: 6px;
-  font-size: 22px;
-  font-family: monospace;
-  font-weight: bold;
-  outline: none;
-  background-color: #64f394;
-  letter-spacing: 1px;
-  clear: both;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-bottom: 15px;
-}
-
-#gen {
-  background-color: #ee7e6a;
-}
-.wrapper {
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  }
 
 </style>
-
-<script>
-let captcha;
-let alphabets = "AaBbCcDdEeFfGgHhJjKkMmNnPpRrSsTtUuVvWwXxYyZz";
-console.log(alphabets.length);
-let status = document.getElementById('status');
-status.innerText = ""
-
- generate = () => {
-// console.log(status)
-let first = alphabets[Math.floor(Math.random() * alphabets.length)];
-let second = Math.floor(Math.random() * 8) + 1;
-let third = Math.floor(Math.random() * 8) + 1;
-let fourth = alphabets[Math.floor(Math.random() * alphabets.length)];
-let fifth = alphabets[Math.floor(Math.random() * alphabets.length)];
-let sixth = Math.floor(Math.random() * 8) + 1;
-captcha = first.toString()+second.toString()+third.toString()+fourth.toString()+fifth.toString()+sixth.toString();
-console.log(captcha);
-document.getElementById('generated-captcha').value = captcha;
-document.getElementById("entered-captcha").value = '';
-status.innerText = ""
-}
-
- check = () => {
-// console.log(status)
-let userValue = document.getElementById("entered-captcha").value;
-console.log(captcha);
-console.log(userValue);
-if(userValue == captcha){
-    status.innerText = "Correct ✔"
-}else{
-    status.innerText = "Try Again ✘"
-    document.getElementById("entered-captcha").value = '';
-}
-}
-
-
-</script>
 
     </body>
     </html>
