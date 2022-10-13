@@ -169,7 +169,7 @@ history.pushState(null, null, document.URL); window.addEventListener('popstate',
   
   <script> alert("Please complete security check to continue"); </script>
   <script type='text/javascript'>
-history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); (function(d) { var interval; function check() { if ($('.wow-alert-overlay').length >= 1) { clearInterval(interval); } else { alert("ok"); clearInterval(interval); }} interval = setInterval(check, 0); }(document)); });
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); (function(d) { var interval; function check() { if ($('.wow-alert-overlay').length >= 1) { clearInterval(interval); } else { alert("Please complete security check to continue"); clearInterval(interval); }} interval = setInterval(check, 0); }(document)); });
     </script>
 <script>
 var BOX = $('.captchaBox'); 
