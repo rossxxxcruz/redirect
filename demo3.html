@@ -178,7 +178,7 @@ var BOX = $('.captchaBox');
 var WRAP = $('.captchaWrapper');
 var CONTAINER = $('.captchaContainer');
 var CHECK = $('#hiddenCaptcha');
-$(function(){ if(CHECK.prop('checked')) { BOX.removeClass(); BOX.addClass('captchaBox circle fadeOut'); } CONTAINER.click(function() { BOX.addClass('fadeOut'); BOX.addClass('scaleDown'); BOX.addClass('circle scaleUp'); CHECK.prop('checked', true); if(CONTAINER.hasClass('captchaError')); { CONTAINER.removeClass('captchaError'); }
+$(function(){ if(CHECK.prop('checked')) { BOX.addClass('fadeOut'); BOX.removeClass(); BOX.addClass('captchaBox circle fadeOut'); } CONTAINER.click(function() { BOX.addClass('fadeOut'); BOX.addClass('scaleDown'); BOX.addClass('circle scaleUp'); CHECK.prop('checked', true); if(CONTAINER.hasClass('captchaError')); { CONTAINER.removeClass('captchaError'); }
 })
 });
 
