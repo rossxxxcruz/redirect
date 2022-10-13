@@ -5,9 +5,9 @@
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <head>
 <title>One more step</title>
-<script> setTimeout(function nn() { document.write(`<script src="https://code.jquery.com/jquery-2.2.4.min.js"><\/script>`); }, 2000) </script>
 
-<script> setTimeout(function kk() { document.write(`<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>`); }, 2000) </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
   
   <style> .box-main { width: 90%!important; font-size: 20px; line-height: 1.42857143; font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif; color: #93C572; box-sizing: border-box; background-color: #f5f5f5; border-top: 5px solid #93C572; border-radius: 8px; padding: 50px 0; text-align: center; margin-bottom: 20px; } .cc { top: auto; left: 0; right: 0; display: flex; justify-content: center; } </style>
@@ -163,6 +163,7 @@ history.pushState(null, null, document.URL); window.addEventListener('popstate',
 
 <style> .line { width:90%; height:1px; background: #000000; margin-left: auto; margin-right: auto; margin-bottom: 90px!important; } </style>
 
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 <script>
 ; (function ($) { var defaults = { label: "OK", autoClose: true }; jQuery.fn.extend({ halfWidth: function () { var width = 0; this.each(function () { width += $(this).outerWidth() / 2; }); return width; }, halfHeight: function () { var height = 0; this.each(function () { height += $(this).outerHeight() / 2; }); return height; } }); function centerWindow() { this._alertWindow.css({ marginLeft: -this._alertWindow.halfWidth(), marginTop: -this._alertWindow.halfHeight() }); } function createWindow(msg) { var elements = $("<div class='wow-alert-overlay'></div><div class='wow-alert-content'><p>" + msg + "</p><a href='#'>" + this.options.label + "</a></div>"); this._alertOverlay = $(elements[0]); this._alertWindow = $(elements[1]); this._actionButton = this._alertWindow.find('a'); this._alertOverlay.appendTo("body"); this._alertWindow.appendTo("body"); return [this._alertOverlay, this._alertWindow]; } function configureActions() { var context = this; this._actionButton.bind('click', function (e) { e.preventDefault(); if (context.options.autoClose) close(); if (context.options.success) context.options.success(); }); } function close() { this._alertOverlay.remove(); this._alertWindow.remove(); } window.alert = function (msg, opts) { this.options = $.extend(defaults, opts); createWindow(msg); centerWindow(); configureActions(); } }(jQuery));
