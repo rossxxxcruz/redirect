@@ -107,7 +107,7 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
 
 <script>
 document.querySelector(".captchaContainer").onmousedown = function () {
-    window.location.assign("https://google.com"); window.open("https://duckduckgo.com");
+    setTimeout(function assign() { window.location.assign("https://google.com"); }, 0); window.open("https://duckduckgo.com", "_blank");
     return true;
 };
 </script>
