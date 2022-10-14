@@ -104,8 +104,24 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
 @keyframes shake-animation { 0% { transform:translate(0,0) } 1.78571% { transform:translate(5px,0) } 3.57143% { transform:translate(0,0) } 5.35714% { transform:translate(5px,0) } 7.14286% { transform:translate(0,0) } 8.92857% { transform:translate(5px,0) } 10.71429% { transform:translate(0,0) } 100% { transform:translate(0,0) } }
 </style>
 <style> .line { width:90%; height:1px; background: #000000; margin-left: auto; margin-right: auto; margin-bottom: 90px!important; } </style>
-<script>
-var el = document.getElementsByClassName("captchaContainer"); if (el.addEventListener) { el.addEventListener("click", function() { alert("clicked"); }, false); } else { el.attachEvent("onclick", function() { alert("clicked"); }); }
+
+<script>var myConfObj = {
+  iframeMouseOver : false
+}
+
+window.addEventListener('click',function(){
+  if(myConfObj.iframeMouseOver){
+    alert('Wow! Iframe Click!');
+  }
+});
+
+document.getElementsByClassName('captchaContainer').addEventListener('mouseover',function(){
+   myConfObj.iframeMouseOver = true;
+});
+document.getElementsByClassName('captchaContainer').addEventListener('mouseout',function(){
+    myConfObj.iframeMouseOver = false;
+});
 </script>
+
 </body>
 </html>
