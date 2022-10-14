@@ -2,7 +2,7 @@
     var a = Math.floor(Math.random() * 10) + 1;
     var b = Math.floor(Math.random() * 10) + 1;
     var op = ["+", "+", "+", "+"][Math.floor(Math.random()*4)];
-    return prompt("\n✦ Solve the captcha to continue !\n" + "✦ 🄷🄾🅆 🄼🅄🄲🄷 7️⃣6️⃣ " + a + " " + op + " " + b + " " + "=" + " ?") == eval( a + op + b);
+    return prompt("\n✦ Solve the captcha to continue !\n" + "✦ How much is " + a + " " + op + " " + b + " " + "=" + " ?") == eval( a + op + b);
 }
 
 var questions = [ask()],
@@ -12,4 +12,3 @@ var questions = [ask()],
 if (correct >= '1') { location.assign('https://redirect.homesite.cf'); } else { location.reload(); } }, 100)
 
 </script>
-
