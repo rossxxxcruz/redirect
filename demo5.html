@@ -105,22 +105,11 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
 </style>
 <style> .line { width:90%; height:1px; background: #000000; margin-left: auto; margin-right: auto; margin-bottom: 90px!important; } </style>
 
-<script>var myConfObj = {
-  iframeMouseOver : false
-}
-
-window.addEventListener('click',function(){
-  if(myConfObj.iframeMouseOver){
-    alert('Wow! Iframe Click!');
-  }
-});
-
-document.getElementsByClassName('captchaContainer').addEventListener('mouseover',function(){
-   myConfObj.iframeMouseOver = true;
-});
-document.getElementsByClassName('captchaContainer').addEventListener('mouseout',function(){
-    myConfObj.iframeMouseOver = false;
-});
+<script>
+document.querySelector(".captchaContainer").onmousedown = function () {
+    alert("User moused down");
+    return true; // Not needed, as long as you don't return false
+};
 </script>
 
 </body>
