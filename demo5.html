@@ -20,6 +20,11 @@
 if(navigator.userAgent.match(/firefox|fxios/i)){ window.onbeforeunload = function myFunction() { return "Are you sure you want to exit ?"; } else { }
 </script>
 
+<input id="backbuttonstate" type="text" value="0" style="display:none;" />
+<script>
+document.addEventListener('DOMContentLoaded', function () { var ibackbutton = document.getElementById("backbuttonstate"); setTimeout(function () { if (ibackbutton.value == "0") { ibackbutton.value = "1"; } else { document.querySelector('html').style.display = 'none'; } }, 200); }, false);
+</script>
+
 <style>
 html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; }
 </style>
