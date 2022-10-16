@@ -20,7 +20,7 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </script>
 
 <script>
-if(navigator.userAgent.match(/firefox|fxios/i)) { if(window.history.length == 1) { } else { window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; }); } } else { }
+if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(navigator.userAgent.match(/firefox|fxios/i)) { if(window.history.length == 1) { } else { window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; }); } } else { }; } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(navigator.userAgent.match(/firefox|fxios/i)) { if(window.history.length == 1) { } else { window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; }); } } else { }; } else { }
 </script>
 
 <style>
