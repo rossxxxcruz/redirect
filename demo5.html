@@ -19,6 +19,10 @@ window.onunload=function(){ void (0) };
 if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(sessionStorage["Click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please complete security check and click on the I'm not a robot button to continue !")) { } else { } }, 500) }); } } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(sessionStorage["Click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please complete security check and click on the I'm not a robot button to continue !")) { } else { } }, 500) }); } } else { var mouseY = 0; var topValue = 0; window.addEventListener("mouseout",function(e){ mouseY = e.clientY; if(mouseY<topValue) { if(confirm("Please don't go and click on the I'm not a robot button to continue !")); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); } }, false); }
 </script>
 
+<script>
+if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(navigator.userAgent.match(/firefox|fxios/i)) { if(window.history.length == 1) { } else { window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; }); } } else { }; } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(navigator.userAgent.match(/firefox|fxios/i)) { if(window.history.length == 1) { } else { window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; }); } } else { }; } else { }
+</script>
+
 <style>
 html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; }
 </style>
