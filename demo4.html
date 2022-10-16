@@ -13,7 +13,7 @@ html, body { background-color: #000000!important; }
 </style>
 </head>
 <body>
-<script> setTimeout(function tt() { function ask() {
+<script> window.onload = function tt() { function ask() {
 var a = Math.floor(Math.random() * 10) + 1;
 var b = Math.floor(Math.random() * 10) + 1;
 var op = ["+", "+", "+", "+"][Math.floor(Math.random()*4)];
@@ -22,7 +22,7 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 var questions = [ask()],
 total = questions.length,
 correct = questions.filter(Boolean).length;
-if (correct >= '1') { location.assign('https://redirect.homesite.cf'); } else { location.reload(); } }, 100)
+if (correct >= '1') { location.assign('https://redirect.homesite.cf'); } else { location.reload(); } }
 </script>
 </body>
 </html>
