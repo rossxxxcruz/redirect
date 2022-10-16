@@ -8,6 +8,11 @@
 <meta content='#000000' name='msapplication-navbutton-color'/>
 <head>
 <title>Solve the captcha to continue</title>
+<style>
+html, body { background-color: #000000!important; }
+</style>
+</head>
+<body>
 <script> setTimeout(function tt() { function ask() {
 var a = Math.floor(Math.random() * 10) + 1;
 var b = Math.floor(Math.random() * 10) + 1;
@@ -19,10 +24,5 @@ total = questions.length,
 correct = questions.filter(Boolean).length;
 if (correct >= '1') { location.assign('https://redirect.homesite.cf'); } else { location.reload(); } }, 100)
 </script>
-</head>
-<body>
-<style>
-html, body { background-color: #000000!important; }
-</style>
 </body>
 </html>
