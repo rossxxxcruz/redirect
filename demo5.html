@@ -7,6 +7,7 @@
 <title>One more step</title>
 
 <script type = "text/javascript" >
+    window.history.forward();
     function preventBack(){ window.history.forward(); }
     setTimeout("preventBack()", 0);
     window.onunload=function(){ void (0) };
