@@ -10,9 +10,7 @@
 if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); if(navigator.userAgent.match(/firefox|fxios/i)) { window.scrollTo(0, 0); location.reload(); } else { alert("Please click I'm not a robot button to continue !"); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); }; }); }
 </script>
 
-<script>
-if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(sessionStorage["Click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please click I'm not a robot button to continue !")) { } else { } }, 500) }); } } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(sessionStorage["Click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please click I'm not a robot button to continue !")) { } else { } }, 500) }); } } else { var mouseY = 0; var topValue = 0; window.addEventListener("mouseout",function(e){ mouseY = e.clientY; if(mouseY<topValue) { if(confirm("Please do not leave the page and click I'm not a robot button to continue !")); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); } }, false); }
-</script>
+
 
 <script>
 if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(navigator.userAgent.match(/firefox|fxios/i)) { if(window.history.length == 1) { } else { window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; }); } } else { }; } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(navigator.userAgent.match(/firefox|fxios/i)) { if(window.history.length == 1) { } else { window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; }); } } else { }; } else { }
