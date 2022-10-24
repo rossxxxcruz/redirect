@@ -7,7 +7,8 @@
 <title>One more step</title>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-<script> setTimeout(function () { Swal.fire('Any fool can use a computer') }, 5000) </script>
+<script src="jquery-3.6.0.min.js"></script>
+  <script> setTimeout(function () { Swal.fire('Any fool can use a computer') }, 5000) </script>
 
 <script>
 if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); alert("Please click I'm not a robot button to continue !"); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); }); }
