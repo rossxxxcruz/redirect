@@ -5,13 +5,6 @@
 <meta content='notranslate' name='google'/>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <title>One more step</title>
-  <script src="https://sweetalert2.all.min.js"></script>
-  <script> window.onclick = function yy() {Swal.fire({
-  title: 'Error!',
-  text: 'Do you want to continue',
-  icon: 'error',
-  confirmButtonText: 'Cool'
-})  } </script>
 
 <script>
 if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); alert("Please click I'm not a robot button to continue !"); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); }); }
