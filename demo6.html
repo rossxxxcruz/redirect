@@ -5,7 +5,9 @@
 <meta content='notranslate' name='google'/>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <title>One more step</title>
-
+<script>
+window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; });
+</script>
 <script>
 if(sessionStorage["click"]) { } else { ! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); }); } } catch (o) {} }(); }
 </script>
