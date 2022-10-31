@@ -19,7 +19,7 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </script>
 
 <script>
-window.onbeforeunload = function() { return 'Are you sure'; }
+window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; });
 </script>
 
 <style>
