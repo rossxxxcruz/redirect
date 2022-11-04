@@ -79,7 +79,7 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 
 <script> var x = document.querySelector(".imageOK"); x.style.opacity = "0"; </script>
 
-<script> document.querySelector('.imageNO').onload = setTimeout(function(){ document.querySelector(".imageOK").style.opacity = "1"; }, 2000); </script>
+<script> document.querySelector('.imageNO').onload = function(){ document.querySelector(".imageOK").style.opacity = "1"; }; </script>
 
 <script>
 document.querySelector(".imageOK").onclick = function () {
