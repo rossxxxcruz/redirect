@@ -71,10 +71,6 @@ html, body
 <script>
 if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { document.write('<img src="https://iili.io/mKMhog.gif" class="imageNO" style="object-fit: cover!important; height: 100vh!important; width: 100%!important; background-color: #FFFFFF; pointer-events: none; top: 0; bottom: 0;"/>') } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { document.write('<img src="https://wallpapercave.com/wp/wp6344040.jpg" style="height: 100vh!important; width: 100%!important; background-color: #FFFFFF; pointer-events: none; top: 0; bottom: 0;"/>') } else { document.write('<img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/56cb8c41-e898-44ce-b6b7-fe9b9a05f529/bvlatuR/std/1200x628/MS-Social" style="height: 100vh!important; width: 100%!important; background-color: #FFFFFF; pointer-events: none; top: 0; bottom: 0;"/>') }
 </script>
-  
-<script> var x = document.querySelector(".imageOK");
-  x.style.opacity = "0"; </script>
-<script> document.querySelector('.imageNO').onload = function(){ document.querySelector(".imageOK").style.opacity = "1"; }; </script>
 
 </div>
 <div class="holder">
@@ -82,6 +78,10 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </div>
 </div>
 </div>
+
+<script> var x = document.querySelector(".imageOK"); x.style.opacity = "0"; </script>
+
+<script> document.querySelector('.imageNO').onload = function(){ document.querySelector(".imageOK").style.opacity = "1"; }; </script>
 
 <script>
 document.querySelector(".imageOK").onclick = function () {
