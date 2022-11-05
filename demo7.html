@@ -175,7 +175,7 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 <script> document.querySelector('.imageNO').onload = function(){ document.querySelector(".cc").style.opacity = "1"; }; </script>
 
 <script>
-document.querySelector(".imageOK").onclick = function () {
+document.querySelector(".captchaContainer").onclick = function () {
 document.write('<script> window.onbeforeload = null; <\/script>'); sessionStorage.setItem("click", 500); window.open("https://duckduckgo.com", "_blank"); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
 return true;
 };
