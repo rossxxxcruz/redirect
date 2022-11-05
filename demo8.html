@@ -37,7 +37,7 @@ setTimeout(function alert() { if (confirm("One more step | Please complete secur
  html, body {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -46,10 +46,7 @@ setTimeout(function alert() { if (confirm("One more step | Please complete secur
   background-image: url("https://iili.io/mKMhog.gif");
   background-attachment: fixed;
   background-size: cover;
-    
-    height: -moz-available;          /* WebKit-based browsers will ignore this. */
-    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-    height: fill-available;
+  object-fit: cover;
 }
 .llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
 .captchaContainer {
