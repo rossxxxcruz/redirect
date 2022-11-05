@@ -45,7 +45,11 @@ setTimeout(function alert() { if (confirm("One more step | Please complete secur
   background-color: #ffffff;
   background-image: url("https://iili.io/mKMhog.gif");
   background-attachment: fixed;
-  background-size: 100vh;
+  background-size: cover;
+    
+    height: -moz-available;          /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    height: fill-available;
 }
 .llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
 .captchaContainer {
