@@ -50,15 +50,24 @@ window.addEventListener('beforeunload', (event) => { event.preventDefault(); eve
   margin: 0;
   flex-direction: column;
   background-color: #ffffff;
-  background-image: url("https://iili.io/mKMhog.gif");
   background-attachment: fixed;
   background-size: cover;
   object-fit: cover;
-  -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  -ms-filter: blur(4px);
-  filter: blur(4px);
+  
+}
+    body:before {
+    content: "";
+    position: absolute;
+    background-image: url("https://iili.io/mKMhog.gif");
+  
+    background-size: cover;
+    z-index: -1; /* Keep the background behind the content */
+    height: 20%; width: 20%; /* Using Glen Maddern's trick /via @mente */
+
+    /* don't forget to use the prefixes you need */
+    transform: scale(5);
+    transform-origin: top left;
+    filter: blur(2px);
 }
 .llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
 .captchaContainer {
