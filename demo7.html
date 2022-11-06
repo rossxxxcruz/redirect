@@ -54,11 +54,6 @@ window.addEventListener('beforeunload', (event) => { event.preventDefault(); eve
   background-attachment: fixed;
   background-size: cover;
   object-fit: cover;
-  -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  -ms-filter: blur(4px);
-  filter: blur(4px);
 }
 .llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
 .captchaContainer {
@@ -132,7 +127,7 @@ window.addEventListener('beforeunload', (event) => { event.preventDefault(); eve
   transition: all 0.5s ease;
   transform: scale(0.2,0.2);
 }
-
+.wrapper { backdrop-filter: blur(5px); }
 @keyframes shake-animation { 0% { transform:translate(0,0) } 1.78571% { transform:translate(5px,0) } 3.57143% { transform:translate(0,0) } 5.35714% { transform:translate(5px,0) } 7.14286% { transform:translate(0,0) } 8.92857% { transform:translate(5px,0) } 10.71429% { transform:translate(0,0) } 100% { transform:translate(0,0) } }
 </style>
 <script> document.querySelector('body').onload = function(){ document.querySelector(".textOK").style.color = "white"; }; </script>
