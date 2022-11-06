@@ -127,38 +127,7 @@ window.addEventListener('beforeunload', (event) => { event.preventDefault(); eve
   transition: all 0.5s ease;
   transform: scale(0.2,0.2);
 }
-.circle {
-  border-top: 2px solid #000000;
-  border-right-color: #000000;
-  border-bottom: 2px solid #000000;
-  border-left-color: #000000;
-  border-radius: 12px;
-  background-color: #E5E4E2;
-}
-.scaleUp {
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  transition: all .6s ease;
-  transform: scale(1,1);
-}
-.rotation {
-  -webkit-transition: all 2s ease-out;
-  -moz-transition: all 2s ease-out;
-  -ms-transition: all 2s ease-out;
-  transition: all 2s ease-out;
-  transform: rotate(1080deg);
-}
-.fadeOut {
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  transition: all .6s ease;
-  border-color: transparent;
-}
-.captchaError {
-  box-shadow: 0 0 1px 1px #93C572;
-}
+
 @keyframes shake-animation { 0% { transform:translate(0,0) } 1.78571% { transform:translate(5px,0) } 3.57143% { transform:translate(0,0) } 5.35714% { transform:translate(5px,0) } 7.14286% { transform:translate(0,0) } 8.92857% { transform:translate(5px,0) } 10.71429% { transform:translate(0,0) } 100% { transform:translate(0,0) } }
 </style>
 <script> document.querySelector('body').onload = function(){ document.querySelector(".textOK").style.color = "white"; }; </script>
