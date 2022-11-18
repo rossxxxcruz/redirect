@@ -18,8 +18,12 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </script>
 
 <script data-cfasync="false">
-window.addEventListener('beforeunload', function() { return "Wait"; });
-</script>
+window.onbeforeunload = return myFunction;
+  function myFunction() {
+  return "Write something clever here...";
+}</script>
+  
+  
 
 <style>
 html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; }
