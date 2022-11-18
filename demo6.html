@@ -17,9 +17,7 @@ if(sessionStorage["click"]) { window.history.forward(); function preventBack() {
 if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(sessionStorage["click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please click I'm not a robot button to continue !")) { } else { } }, 100); }); } } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(sessionStorage["click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please click I'm not a robot button to continue !")) { } else { } }, 100); }); } } else { window.addEventListener("load", function() { setTimeout(function alert() { var mouseY = 0; var topValue = 0; window.addEventListener("mouseout",function(e){ mouseY = e.clientY; if(mouseY<topValue) { if(confirm("Please stay on the page and click I'm not a robot button to continue !")); setTimeout(function scroll() { window.scrollTo(0, 0); }, 0); } }, false); }, 0) }); }
 </script>
 
-<script data-cfasync="false">
-window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; });
-</script>
+
 
 <style>
 html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; }
@@ -115,7 +113,7 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
 
 <script data-cfasync="false">
 document.querySelector(".captchaContainer").onclick = function () {
-document.write('<script> window.onbeforeload = null; <\/script>'); sessionStorage.setItem("click", 500); location.href = "https://google.com";
+sessionStorage.setItem("click", 500); location.href = "https://google.com";
 return true;
 };
 </script>
