@@ -18,7 +18,7 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </script>
 
 <script data-cfasync="false">
-if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = function () { return "Are you sure want to exit ?"; }; }
+window.onbeforeunload = function () { return "Are you sure want to exit ?"; };
 </script>
 
 <style>
@@ -115,7 +115,7 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
 
 <script data-cfasync="false">
 document.querySelector(".captchaContainer").onclick = function () {
-if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = null; }; sessionStorage.setItem("click", 500); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
+window.onbeforeunload = null; sessionStorage.setItem("click", 500); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
 return true;
 };
 </script>
