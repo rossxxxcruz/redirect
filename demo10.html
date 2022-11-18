@@ -115,7 +115,7 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
 
 <script data-cfasync="false">
 document.querySelector(".captchaContainer").onclick = function () {
-if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { document.write('<script> window.onbeforeload = null; <\/script>'); }; sessionStorage.setItem("click", 500); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
+if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeload = null; }; sessionStorage.setItem("click", 500); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
 return true;
 };
 </script>
