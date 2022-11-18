@@ -18,7 +18,7 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </script>
 
 <script data-cfasync="false">
-if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { document.write('<script> window.onbeforeunload = function () { return "Are you sure want to exit ?"; }'); }
+if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = function () { return "Are you sure want to exit ?"; }; }
 </script>
 
 <style>
