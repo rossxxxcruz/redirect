@@ -18,10 +18,11 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </script>
 
 <script data-cfasync="false">
-window.onbeforeunload = return myFunction;
-  function myFunction() {
-  return "Write something clever here...";
-}</script>
+window.onbeforeunload = function () {
+
+    return  "Are you sure want to LOGOUT the session ?";
+}; 
+  </script>
   
   
 
