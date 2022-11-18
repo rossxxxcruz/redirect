@@ -18,7 +18,7 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kin
 </script>
 
 <script data-cfasync="false">
-window.addEventListener('beforeunload', (event) => { event.preventDefault(); event.returnValue = ''; });
+window.addEventListener('beforeunload', () => { return 'OK'});
 </script>
 
 <style>
