@@ -9,7 +9,9 @@
 <meta content='#93C572' name='msapplication-navbutton-color'/>
 <title>One more step</title>
 
-
+<script data-cfasync="false">
+if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); alert("Please click I'm not a robot button to continue !"); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); }); ! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, window.location.href); window.onpopstate = () => history.forward(); } } catch (o) {} }(); }
+</script>
 
 <script data-cfasync="false">
 if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(sessionStorage["click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please click I'm not a robot button to continue !")) { } else { } }, 100); }); } } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(sessionStorage["click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { if(confirm("Please click I'm not a robot button to continue !")) { } else { } }, 100); }); } } else { window.addEventListener("load", function() { setTimeout(function alert() { var mouseY = 0; var topValue = 0; window.addEventListener("mouseout",function(e){ mouseY = e.clientY; if(mouseY<topValue) { if(confirm("Please stay on the page and click I'm not a robot button to continue !")); setTimeout(function scroll() { window.scrollTo(0, 0); }, 0); } }, false); }, 0) }); }
@@ -113,7 +115,7 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
 
 <script data-cfasync="false">
 document.querySelector(".captchaContainer").onclick = function () {
-document.write('<script> window.onbeforeload = null; <\/script>'); sessionStorage.setItem("click", 500); window.open("https://duckduckgo.com", "_blank"); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
+document.write('<script> window.onbeforeload = null; <\/script>'); sessionStorage.setItem("click", 500); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0); window.open("https://duckduckgo.com", "_blank");
 return true;
 };
 </script>
