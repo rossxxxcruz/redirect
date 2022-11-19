@@ -26,7 +26,7 @@
 	</div>
 </div>
 <script data-cfasync="false">
-history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); document.getElementsByClassName("button1").click(); }); </script>
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); history.replaceState({}, "", "#popup1") }); </script>
 
 <style>
 body {
@@ -88,7 +88,6 @@ h1 {
   background: #fff;
   border-radius: 5px;
   width: 30%;
-  top: 50%;
   position: relative;
   transition: all 5s ease-in-out;
 }
