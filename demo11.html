@@ -8,9 +8,7 @@
 <meta content='#93C572' name='apple-mobile-web-app-status-bar-style'/>
 <meta content='#93C572' name='msapplication-navbutton-color'/>
 <title>One more step</title>
-	<script type='text/javascript'>
-history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); document.getElementsByClassName("button1").click(); }); </script>
-
+	
 	</head>
 <body>
 <h1>Popup/Modal Windows without JavaScript</h1>
@@ -21,18 +19,18 @@ history.pushState(null, null, document.URL); window.addEventListener('popstate',
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h2>Here i am</h2>
-		<a class="close" href="">&times;</a>
+		<a class="close" href="#">&times;</a>
 		<div class="content">
 			Thank to pop me out of that button, but now i'm done so you can close this window.
 		</div>
 	</div>
 </div>
+<script data-cfasync="false">
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); document.getElementsByClassName("button1").click(); }); </script>
 
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;
-  background-size: cover;
   height: 100%;
 }
 
@@ -90,6 +88,7 @@ h1 {
   background: #fff;
   border-radius: 5px;
   width: 30%;
+  top: 50%;
   position: relative;
   transition: all 5s ease-in-out;
 }
