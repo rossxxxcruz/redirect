@@ -9,14 +9,13 @@
 <meta content='#93C572' name='msapplication-navbutton-color'/>
 <title>One more step</title>
 	<script type='text/javascript'>
-history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); document.getElementsByClassName("button1")[0].getElementsByTagName("a")[0].click();}); </script>
-<script> var url = new URL(window.location.href); var search_params = url.searchParams; search_params.set("new", 7); url.search = search_params.toString(); var new_url = url.pathname + url.search; window.history.replaceState({}, '', new_url); </script>
-	
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); history.pushState({}, "", "#popup1"); }); </script>
+
 	</head>
 <body>
 <h1>Popup/Modal Windows without JavaScript</h1>
 <div class="box">
-	<a class="button1" href="?new=7">Let me Pop up</a>
+	<a class="button1" href="#popup1">Let me Pop up</a>
 </div>
 
 <div id="popup1" class="overlay">
