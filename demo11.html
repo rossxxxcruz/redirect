@@ -8,11 +8,13 @@
 <meta content='#93C572' name='apple-mobile-web-app-status-bar-style'/>
 <meta content='#93C572' name='msapplication-navbutton-color'/>
 <title>One more step</title>
+	<script type='text/javascript'>
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); document.getElementsByClassName("button1")[0].getElementsByTagName("a")[0].click();}); </script>
 </head>
 <body>
 <h1>Popup/Modal Windows without JavaScript</h1>
 <div class="box">
-	<a class="button" href="#popup1">Let me Pop up</a>
+	<a class="button1" href="#popup1">Let me Pop up</a>
 </div>
 
 <div id="popup1" class="overlay">
