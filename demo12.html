@@ -10,7 +10,7 @@
 <title>One more step</title>
 
 <script data-cfasync="false">
-if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { if(window.history && window.history.pushState) { window.addEventListener('popstate', function() { history.pushState(null, null, document.URL); alert("Please click I'm not a robot button to continue !"); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); return false; }); window.history.pushState('', null); } }
+if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { window.history.pushState({page: 1}, "", ""); window.onpopstate = function(event) { if(event){ history.pushState(null, null, document.URL); alert("Please click I'm not a robot button to continue !"); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); } }; }
 </script>
 
 <script data-cfasync="false">
