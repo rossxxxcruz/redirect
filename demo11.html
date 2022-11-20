@@ -1,1 +1,1 @@
-<script data-cfasync="false"> if (window.history && window.history.pushState) { window.addEventListener('popstate', function() { alert('wait'); return false; }); history.pushState(null, null, document.URL); } </script>
+<script> if (window.history && window.history.pushState) { window.addEventListener('popstate', function() { history.pushState(null, null, document.URL); alert('ok'); return false; }); window.history.pushState('', null); } </script>
