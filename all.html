@@ -6,17 +6,352 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no' name='viewport' />
 
 <title>One more step</title>
-	
-	
-	<style type="text/css">html {
-      font-family: sans-serif;
-      -ms-text-size-adjust: 100%;
-      -webkit-text-size-adjust: 100%
+
+<style type="text/css">html, body {
+      margin: 0;
+      padding: 0;
+      width: auto;
+      height: 100%;
       }
       body {
-        margin: 0
+        font-family: -apple-system, "Roboto", Trebuchet MS, sans-serif;
+        font-size: 0.85em;
+        line-height: 1.2em;
+        color: #000;
+        background-color: #999;
       }
-    
+      a, img {
+        border: 0;
+        outline: none;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      h1, p {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin-bottom: 9px;
+        font-weight: bold;
+        font-size: 127%;
+        line-height: 100%;
+      }
+      .wrap {
+        position: relative;
+        margin: 0 auto;
+        width: auto;
+        min-width: 240px;
+        max-width: 100%;
+        height: 100%;
+        min-height: 240px;
+        overflow: hidden;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .pagelink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+      }
+      .description {
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        top: 5px;
+        bottom: 5px;
+        color: #000;
+        text-align: left;
+        white-space: normal;
+        overflow: hidden;
+      }
+      .window {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 84.4%;
+        min-width: 240px;
+        max-width: 320px;
+        margin: auto;
+        /*text-align: center;*/
+        border-radius: 12px;
+        background-color: #f9f9f9;
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+      }
+      .text {
+        margin: 7.6% 7% 8% 7%;
+      }
+      .buttons, .button {
+        margin: 0;
+        text-align: center;
+      }
+      .buttons {
+        position: relative;
+        height: auto;
+        min-height: 45px;
+        color: #1275ec;
+        font-weight: bold;
+        font-size: 130%;
+        border-top: 1px solid #b4b4b4;
+        white-space: nowrap;
+      }
+      .buttons:after {
+        /* content: "";*/
+        display:block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        height: auto;
+        font-size: 0;
+        line-height: 0;
+        border: 0;
+        border-left: 1px solid #b4b4b4;
+        overflow: hidden;
+      }
+      .button {
+        display:inline-block;
+        margin: 0px auto;
+        padding: 15px 3%;
+        width: 43%;
+        color: #1275ec;
+        text-align: center;
+        white-space: normal;
+      }
+      @supports (display: -webkit-box) or (display: -moz-box) or (display: -webkit-flex) or (display: flex) {
+        .buttons, .button {
+          display:-webkit-box;
+          display:-moz-box;
+          display:-webkit-flex;
+          display:flex;
+          -webkit-flex-direction: row;
+          -moz-flex-direction: row;
+          flex-direction: row;
+          -webkit-flex-wrap: nowrap;
+          -moz-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          justify-content: space-between;
+          -webkit-align-items: stretch;
+          -moz-flex-align: stretch;
+          align-items: stretch;
+          -webkit-align-content: stretch;
+          -moz-flex-line-pack: stretch;
+          align-content: stretch;
+          -webkit-box-align: stretch;
+          -moz-box-align: stretch;
+          box-align: stretch;
+          -webkit-box-pack: center;
+          -moz-box-pack: center;
+          box-pack: center;
+          -webkit-box-direction: normal;
+          -moz-box-direction: normal;
+          box-direction: normal;
+          -webkit-box-orient: vertical;
+          -moz-box-orient: vertical;
+          box-orient: vertical;
+        }
+        .button {
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          flex-direction: column;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          justify-content: center;
+        }
+        .button span {
+          -webkit-box-flex: 0 1 auto;
+          -moz-box-flex: 0 1 auto;
+          -webkit-flex: 0 1 auto;
+          flex: 0 1 auto;
+          -webkit-order: 0;
+          -moz-order: 0;
+          order: 0;
+        }
+      }
+      /* ************************************************************************* */
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        h1 {
+          margin-bottom: 2px;
+          line-height: 106%;
+        }
+        .text {
+          margin: 7.5% 6.7% 8% 6.7%;
+        }
+      }
+      @media screen and (orientation: portrait) and (max-width: 400px) {
+        h1 {
+          margin-bottom: 3px;
+          font-size: 128%;
+          line-height: 112%;
+        }
+        .text {
+          margin: 7.4% 6.4% 8% 6.4%;
+        }
+      }
+      @media screen and (orientation: portrait) and (max-width: 375px) {
+        h1 {
+          margin-bottom: 4px;
+          line-height: 118%;
+        }
+        .text {
+          margin: 7.3% 6.1% 8% 6.1%;
+        }
+        .buttons {
+          min-height: 49px;
+        }
+      }
+      @media screen and (orientation: portrait) and (max-width: 350px) {
+        h1 {
+          margin-bottom: 5px;
+          font-size: 129%;
+          line-height: 124%;
+        }
+        .text {
+          margin: 7.2% 5.8% 8% 5.8%;
+        }
+        .buttons {
+          min-height: 46px;
+        }
+      }
+      @media screen and (orientation: portrait) and (max-width: 325px) {
+        body {
+          font-size: 0.84em;
+        }
+        h1 {
+          margin-bottom: 6px;
+          font-size: 130%;
+          line-height: 130%;
+        }
+        .text {
+          margin: 7% 5.6% 8% 5.6%;
+        }
+        .buttons {
+          min-height: 41px;
+        }
+        .button {
+          line-height: 65%;
+        }
+      }
+      @media screen and (orientation: portrait) and (max-width: 300px) {
+        body {
+          font-size: 0.77em;
+        }
+      }
+      @media screen and (orientation: portrait) and (max-width: 275px) {
+        body {
+          font-size: 0.7em;
+        }
+      }
+      @media screen and (orientation: portrait) and (max-width: 250px) {
+        body {
+          font-size: 0.63em;
+        }
+      }
+      /* ************************************************************************* */
+      @media screen and (orientation: landscape) and (max-height: 450px) {
+        h1 {
+          margin-bottom: 2px;
+          line-height: 106%;
+        }
+        .text {
+          margin: 6.5% 7% 7% 7%;
+        }
+      }
+      @media screen and (orientation: landscape) and (max-height: 400px) {
+        h1 {
+          margin-bottom: 3px;
+          font-size: 128%;
+          line-height: 112%;
+        }
+        .text {
+          margin: 5.5% 7% 6% 7%;
+        }
+      }
+      @media screen and (orientation: landscape) and (max-height: 375px) {
+        h1 {
+          margin-bottom: 4px;
+          line-height: 118%;
+        }
+        .text {
+          margin: 4.5% 7% 5% 7%;
+        }
+        .buttons {
+          min-height: 49px;
+        }
+      }
+      @media screen and (orientation: landscape) and (max-height: 350px) {
+        h1 {
+          margin-bottom: 5px;
+          font-size: 129%;
+          line-height: 124%;
+        }
+        .text {
+          margin: 3.5% 7% 4% 7%;
+        }
+        .buttons {
+          min-height: 46px;
+        }
+      }
+      @media screen and (orientation: landscape) and (max-height: 325px) {
+        body {
+          font-size: 0.84em;
+        }
+        h1 {
+          margin-bottom: 6px;
+          font-size: 130%;
+          line-height: 130%;
+        }
+        .text {
+          margin: 2.5% 7% 3% 7%;
+        }
+        .buttons {
+          min-height: 41px;
+        }
+        .button {
+          line-height: 65%;
+        }
+      }
+      @media screen and (orientation: landscape) and (max-height: 300px) {
+        body {
+          font-size: 0.77em;
+        }
+      }
+      @media screen and (orientation: landscape) and (max-height: 275px) {
+        body {
+          font-size: 0.7em;
+        }
+      }
+      @media screen and (orientation: landscape) and (max-height: 250px) {
+        body {
+          font-size: 0.63em;
+        }
+      }
+      .blink_me {
+        animation: blinker 1s linear infinite;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0.3;
+          color: red;
+        }
+      }
+      .cancel{
+        color: #999 !important;
+        border-left: 1px solid #aaa;
+        font-weight: 400;
+      }
       /*dialog*/
       #myModal{
         position: fixed;
