@@ -677,7 +677,7 @@
         btn = alertObj.appendChild(d.createElement("a"));
         btn.id = "closeBtn";
         btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
-        btn.hover(); btn.onclick = function() {
+        btn.href=''; btn.onclick = function() {
           removeCustomAlert();
           return false;
         }
