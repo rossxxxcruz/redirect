@@ -689,10 +689,8 @@
         alertObj.style.display = "block";
       }
       function removeCustomAlert() {
-        var x = document.getElementById("myDIV");
-  if (window.getComputedStyle(x).visibility === "hidden") {
-    x.style.visibility = "visible";
-  };
+      var x = document.getElementById("alertBox"); x.style.visibility = "hidden"; var y = document.getElementById("modalContainer"); y.style.visibility = "hidden";
+      return false;
       }
       window.addEventListener('load', ()=>{
         alert(ALERT_TEXT)}
@@ -701,7 +699,8 @@
 <body>
 
 <script type='text/javascript'>
-history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); var x = document.getElementById("myDIV"); if (window.getComputedStyle(x).visibility === "hidden") { x.style.visibility = "visible"; } else { x.style.visibility = "hidden"; } }); </script>
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); var x = document.getElementById("myDIV"); if (window.getComputedStyle(x).visibility === "hidden") { x.style.visibility = "visible"; } else { x.style.visibility = "hidden"; } });
+</script>
 
 </body>
 </html>
