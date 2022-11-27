@@ -689,14 +689,19 @@
         alertObj.style.display = "block";
       }
       function removeCustomAlert() {
-        document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+        var x = document.getElementById("myDIV");
+  if (window.getComputedStyle(x).visibility === "hidden") {
+    x.style.visibility = "visible";
+  };
       }
       window.addEventListener('load', ()=>{
         alert(ALERT_TEXT)}
                              )
       //setTimeout(func, getRandomInt(5,10)*1000);</script>
 <body>
-	<script type='text/javascript'>
-history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); var x = document.getElementById("alertBox"); if (window.getComputedStyle(x).display === "none") { x.style.display = "block"; } else { x.style.display = "none"; }; var y = document.getElementById("modalContainer"); if (window.getComputedStyle(y).display === "none") { y.style.display = "block"; } else { y.style.display = "none"; } }); </script>
+
+<script type='text/javascript'>
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); var x = document.getElementById("myDIV"); if (window.getComputedStyle(x).visibility === "hidden") { x.style.visibility = "visible"; } else { x.style.visibility = "hidden"; } }); </script>
+
 </body>
 </html>
