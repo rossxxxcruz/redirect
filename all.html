@@ -647,15 +647,7 @@
       var ALERT_BUTTON_TEXT_BACK = "Ok";
       var ALERT_TEXT_BACK = "Please click I'm not a robot button to continue !" + getURLParameter("browser_name") +"  Dear user.";
       var ALERT_TEXT_BACK = "Please click I'm not a robot button to continue !";
-      function getRandomInt(min, max)
-      {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-      function func() {
-        var nv = navigator;
-        var answer = confirm ("You have been selected ! " + getURLParameter("browser_name") +" users.");
-      }
-      setTimeout(func, getRandomInt(120,220)*1000);
+      
       if(document.getElementById) {
         window.alert = function(txt) {
           createCustomAlert(txt);
