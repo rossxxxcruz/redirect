@@ -14,7 +14,11 @@ if(sessionStorage["click"]) { window.history.forward(); function preventBack() {
 </script>
 
 <script data-cfasync="false">
-if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = null; },0); };
+if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = null; },0); } else { };
+</script>
+
+<script data-cfasync="false">
+if(sessionStorage["click"]) { document.getElementById("alertBox").style.visibility = "hidden"; document.getElementById("modalContainer").style.visibility = "hidden"; };
 </script>
 
 <script data-cfasync="false">
