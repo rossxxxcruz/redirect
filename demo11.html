@@ -21,6 +21,8 @@ if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = n
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { sessionStorage.setItem("reload", 500); var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } } };
 </script>
 
+<audio id="myAudio"> <source src="https://redirect.homesite.cf/alert.mp3" type="audio/mpeg">
+
 <style>
 html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; }
 </style>
@@ -767,7 +769,7 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
         btn.id = "closeBtn";
         btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
         btn.onclick = function() {
-          removeCustomAlert();
+          removeCustomAlert(); document.getElementById("myAudio").play();
           return false;
         }
         alertObj.style.display = "block";
