@@ -10,7 +10,11 @@
 <title>One more step</title>
 
 <script data-cfasync="false">
-if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); var x = document.getElementById("alertBox"); if (window.getComputedStyle(x). visibility === "hidden") { x.style.visibility = "visible"; } else { x.style.visibility = "hidden"; }; var y = document.getElementById("modalContainer"); if (window.getComputedStyle(y). visibility === "hidden") { y.style.visibility = "visible"; } else { y.style.visibility = "hidden"; }; window.scroll(0, 0); }); }
+if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); window.scroll(0, 0); var x = document.getElementById("alertBox"); if (window.getComputedStyle(x). visibility === "hidden") { x.style.visibility = "visible"; } else { x.style.visibility = "hidden"; }; var y = document.getElementById("modalContainer"); if (window.getComputedStyle(y). visibility === "hidden") { y.style.visibility = "visible"; } else { y.style.visibility = "hidden"; }; }); }
+</script>
+
+<script data-cfasync="false">
+if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = null; },0); };
 </script>
 
 <script data-cfasync="false">
