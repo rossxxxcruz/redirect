@@ -14,7 +14,11 @@ if(sessionStorage["click"]) { window.history.forward(); function preventBack() {
 </script>
 
 <script data-cfasync="false">
-if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { sessionStorage.setItem("click", 500); if(sessionStorage["click"]) { } else { var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } } } };
+if(sessionStorage["click"]) { setTimeout(function() {window.onbeforeunload = null; },0); };
+</script>
+
+<script data-cfasync="false">
+if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { sessionStorage.setItem("click", 500); var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } } };
 </script>
 
 <style>
