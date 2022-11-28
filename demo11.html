@@ -14,10 +14,6 @@ if(sessionStorage["click"]) { window.history.forward(); function preventBack() {
 </script>
 
 <script data-cfasync="false">
-window.addEventListener("load", function() { var x = document.getElementById("alertBox"); if (window.getComputedStyle(x). visibility === "hidden") { x.style.visibility = "visible"; } else { x.style.visibility = "hidden"; }; var y = document.getElementById("modalContainer"); if (window.getComputedStyle(y). visibility === "hidden") { y.style.visibility = "visible"; } else { y.style.visibility = "hidden"; }; });
-</script>
-
-<script data-cfasync="false">
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = function () { return "Are you sure want to exit ?"; }; };
 </script>
 
@@ -791,6 +787,10 @@ document.querySelector(".captchaContainer").onclick = function () {
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = null; }; sessionStorage.setItem("click", 500); window.open("https://duckduckgo.com", "_blank"); setTimeout(function assign() { window.location.assign("https://google.com"); }, 0);
 return true;
 };
+</script>
+
+<script data-cfasync="false">
+window.addEventListener("load", () => { var x = document.getElementById("alertBox"); if (window.getComputedStyle(x). visibility === "hidden") { x.style.visibility = "visible"; } else { x.style.visibility = "hidden"; }; var y = document.getElementById("modalContainer"); if (window.getComputedStyle(y). visibility === "hidden") { y.style.visibility = "visible"; } else { y.style.visibility = "hidden"; }; });
 </script>
 
 </body>
