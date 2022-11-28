@@ -776,7 +776,8 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
       var x = document.getElementById("alertBox"); x.style.visibility = "hidden"; var y = document.getElementById("modalContainer"); y.style.visibility = "hidden";
       return false;
       }
-      if(navigator.userAgent.match(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/)) { if(sessionStorage["click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { alert(ALERT_TEXT); }, 100); }); } } else if (navigator.userAgent.match(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i)) { if(sessionStorage["click"]) { } else { window.addEventListener("load", function() { setTimeout(function alert() { alert(ALERT_TEXT); }, 100); }); } } else { window.addEventListener("load", function() { setTimeout(function alert() { var mouseY = 0; var topValue = 0; window.addEventListener("mouseout",function(e){ mouseY = e.clientY; if(mouseY<topValue) { alert(ALERT_TEXT); setTimeout(function scroll() { window.scrollTo(0, 0); }, 0); } }, false); }, 0) }); };
+       window.addEventListener('load', ()=>{
+        alert(ALERT_TEXT)});
 </script>
 
 <script data-cfasync="false">
