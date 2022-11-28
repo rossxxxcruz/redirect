@@ -14,7 +14,7 @@ if(sessionStorage["click"]) { window.history.forward(); function preventBack() {
 </script>
 
 <script data-cfasync="false">
-if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = function () { return "Are you sure want to exit ?"; }; };
+if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } } };
 </script>
 
 <style>
