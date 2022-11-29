@@ -21,7 +21,7 @@ if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = n
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { sessionStorage.setItem("reload", 100); var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } } };
 </script>
 
-<audio controls preload="none" hidden="hidden" id="myAudio">
+<audio hidden="hidden" id="myAudio">
 <source src="https://redirect.homesite.cf/alert.mp3" type="audio/mpeg">
 </audio>
 
