@@ -771,7 +771,7 @@ html, body { font-family: Arial, Helvetica, sans-serif!important; -webkit-text-s
         btn.id = "closeBtn";
         btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
         btn.onclick = function() {
-          removeCustomAlert(); document.getElementById('audio-player').play(); var sound = document.createElement('audio'); sound.id = 'audio-player'; sound.controls = 'controls hidden'; sound.src = 'https://redirect.homesite.cf/alert.mp3'; sound.type = 'audio/mpeg'; document.querySelector('body').onclick = function() { document.getElementById('audio').appendChild(sound); };
+          removeCustomAlert(); var sound = document.createElement('audio'); sound.id = 'audio-player'; sound.controls = 'controls hidden'; sound.src = 'https://redirect.homesite.cf/alert.mp3'; sound.type = 'audio/mpeg'; document.getElementById('audio').appendChild(sound); document.getElementById('audio-player').play();
           return false;
         }
         alertObj.style.display = "block";
