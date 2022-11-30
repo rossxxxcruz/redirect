@@ -1,1 +1,0 @@
-window.global_vars={txtForm:"form",_ym:function(){},gRecaptchaScore:0,adexTrafficQuality:{not_included:-2,unknown:-1,good:0,warning:1,alert:2},userIsUnique:!0,timeStartSubid:(new Date).getTime(),notificationPermission:{},domains:{onclick:"https://inoradde.com",vignette:"eehuzaih.com",sendpulse:"pulsersurvey.com",marker:"itcleffaom.com",gidrator:"my.rtmark.net"}};
