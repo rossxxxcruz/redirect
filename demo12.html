@@ -137,37 +137,7 @@ Please wait for the progressbar to proceed to the destination page. </div>
                     //
                 }
             }
-            (function(){
-                $('#init_next_up').submit(function(e){
-                    e.preventDefault();
-                    var orig_btn = $('#init_next_up .form-send').html();
-                    $('#init_next_up .form-send').attr("disabled", "disabled").html('Loading...');
-                    $.ajax({
-                        method: 'POST',
-                        data: $('#init_next_up').serialize(),
-                        url: $('#init_next_up').attr('action'),
-                        success: function(data){
-                            if(data["status"] == "success"){
-                                if(data["data"]["final"] != ""){
-                                    window.location = data["data"]["final"];
-                                } else {
-                                    document.getElementById('next_up').setAttribute("action", data["data"]["next_page"]);
-                                    document.getElementById('next_up_token').value = data["data"]["speed_token"];
-                                    document.getElementById('next_up').submit();
-                                }
-                            } else {
-                                $('#init_next_up .form-send').removeAttr("disabled").html(orig_btn);
-                                show_alert("danger", data["data"]);
-                            }
-                        },
-                        error: function(error){
-                            $('#init_next_up .form-send').removeAttr("disabled").html(orig_btn);
-                            show_alert("danger", error.Message);
-                        }
-                    });
-                });
-
-            })();
+            
             </script>
 <div id="w5b18e1a3e2092783aea4b1aa4a894d8a">
 <center><div id="PapayAds_Square_3" align="center" class="SquareBanner">
