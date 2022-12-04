@@ -1,6 +1,6 @@
-document.write('<style>
+document.write(`<style>
 html, body { position: absolute; left: -9999px; transform: scale(0); }
-<\/style>');
+<\/style>`);
 setTimeout(function GFG_Fun() { 
 
 var Str = `<!DOCTYPE HTML><html>
