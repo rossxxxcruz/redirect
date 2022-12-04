@@ -185,4 +185,4 @@ newHTML.write(Str);
 
 newHTML.close();
 
-}, 100);
+}, 0);
