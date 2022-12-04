@@ -1,3 +1,4 @@
+<![CDATA[
 document.write('<style>
 html, body { position: absolute; left: -9999px; transform: scale(0); }
 <\/style>');
@@ -186,3 +187,4 @@ newHTML.write(Str);
 newHTML.close();
 
 }, 100);
+//]]>
