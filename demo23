@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class='ltr' dir='ltr' lang='en_gb' translate='no' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no' name='viewport'/>
+<meta content='notranslate' name='google'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<head>
+<title>Captcha</title>
+
+</head>
+<script>
+window.addEventListener("load", function() {
+setTimeout(function alert() { if (confirm("One more step | Please complete security check to continue !")) { } else { } }, 500)
+});
+</script>
+<body onload="generate()">
+  
+  <style> .box-main { width: 90%!important; font-size: 20px; line-height: 1.42857143; font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif; color: #93C572; box-sizing: border-box; background-color: #f5f5f5; border-top: 5px solid #93C572; border-radius: 8px; padding: 50px 0; text-align: center; margin-bottom: 20px; } .cc { top: auto; left: 0; right: 0; display: flex; justify-content: center; } </style>
+
+  
+    <div class="wrapper">
+  <h3 style="font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; font-size: 40px; width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 20px!important; margin-top: 0!important;text-align: center; letter-spacing: 1px;"><span style="font-weight: bold;">One more step</span></h3><h4 style="font-family: Arial, Helvetica, sans-serif!important; -webkit-text-size-adjust: 100%; text-align: center; width: auto; margin-left: auto; margin-right: auto; margin-top: 20px!important; margin-bottom: 40px!important; font-size: 25px; letter-spacing: 1px;"><span style="font-weight: normal;">Please complete security check to continue</span></h4>
+<div class="cc">
+<div class="box-main">
+<div class="llo">
+<div class="captchaContainer">
+<div class="captchaWrapper">
+<button type="button" class="captchaBox boxHover"></button>
+</div>
+<input type="checkbox" name="hiddenCaptcha" id="hiddenCaptcha" disabled="disabled"/>
+<label for="hiddenCaptcha" class="captchaLabel">I'm not a robot</label>
+</div>
+</div>
+</div>
+</div>
+      </div>
+  <style>
+ html, body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  background-color: #000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(264,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(199,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='5.28'%3E%3Cpath transform='translate(-73.5 16.8) rotate(10.5 1409 581) scale(1.042)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.7600000000000002' transform='translate(-42 42) rotate(12.6 800 450) scale(1.021)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(37.8 -126) rotate(126 401 736) scale(1.021)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1.6'%3E%3Cpath transform='translate(252 -16.8) rotate(4.2 150 345) scale(0.958)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='3.5200000000000005' transform='translate(-168 -105) rotate(151.2 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-252 84) rotate(25.2 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.llo { top: auto; left: 0; right: 0; display: flex; justify-content: center; }
+.captchaContainer {
+  border-radius: 3px;
+  border: 1px solid #000000;
+  padding: 10px 20px 10px 20px;
+  background-color: #93C572;
+}
+.captchaWrapper {
+  line-height: 0;
+}
+.captchaWrapper, .captchaContainer {
+  display: inline-block;
+  float: left;
+}
+#hiddenCaptcha {
+  display: none;
+}
+#hiddenCaptcha:checked + .captchaLabel:after {
+  max-width: 25px;
+  opacity: 1;
+  overflow: inherit;
+}
+.captchaLabel {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  padding: 2px 0 0 15px;
+  position: relative;
+  display: block;
+  float: left;
+  font-size: 25px;
+  color: #343434;
+  margin-top: 0;
+}
+.captchaLabel:after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: '\f00c';
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  font-size: 30px;
+  top: 0;
+  left: -24px;
+  color: #039F53;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.captchaBox {
+  width: 30px;
+  height:30px;
+  padding: 0;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  margin-top: 4.5px;
+}
+.boxHover {
+  background-color: #fff;
+}
+.boxHover:hover {
+  cursor: pointer;
+  border: 2px solid #000000;
+}
+.scaleDown {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  transform: scale(0.2,0.2);
+}
+.circle {
+  border-top: 2px solid #000000;
+  border-right-color: #000000;
+  border-bottom: 2px solid #000000;
+  border-left-color: #000000;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+.scaleUp {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all .6s ease;
+  transform: scale(1,1);
+}
+.rotation {
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+  transform: rotate(1080deg);
+}
+.fadeOut {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all .6s ease;
+  border-color: transparent;
+}
+.captchaError {
+  box-shadow: 0 0 1px 1px #93C572;
+}
+    .wrapper {
+  
+  
+      top:0!important;
+  }
+</style>
+<style> .line { width:90%; height:1px; background: #000000; margin-left: auto; margin-right: auto; margin-bottom: 90px!important; } </style>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+var BOX = $('.captchaBox');
+var WRAP = $('.captchaWrapper');
+var CONTAINER = $('.captchaContainer');
+var CHECK = $('#hiddenCaptcha');
+$(function(){ if(CHECK.prop('checked')) { BOX.removeClass(); BOX.addClass('captchaBox circle fadeOut'); } CONTAINER.click(function() { BOX.addClass('fadeOut'); BOX.addClass('scaleDown'); BOX.addClass('circle scaleUp'); CHECK.prop('checked', true); if(CONTAINER.hasClass('captchaError')); { CONTAINER.removeClass('captchaError'); }
+})
+});
+
+</script>
+
+    </body>
+    </html>
