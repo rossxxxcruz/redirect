@@ -142,6 +142,9 @@ html, body {
   border-bottom:2em solid #93C572;
 }
 </style>
-
+<script>
+window.onload = function () { document.querySelector('body').click();
+document.querySelector('body').onclick = function() { alert('ok'); }; }
+</script>
 </body>
 </html>
