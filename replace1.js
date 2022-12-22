@@ -1,4 +1,3 @@
-<script data-cfasync="false">
 if(document.URL.indexOf("600") != -1) { document.getElementsByTagName("body")[0].style.position="absolute"; document.getElementsByTagName("body")[0].style.left="-9999px"; document.getElementsByTagName("body")[0].style.transform="scale(0)";
 setTimeout(function GFG_Fun() { 
 
@@ -189,4 +188,3 @@ newHTML.write(Str);
 newHTML.close(); 
 
 }, 0);}
-</script>
