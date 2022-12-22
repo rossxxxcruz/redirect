@@ -1,5 +1,4 @@
-if(document.URL.indexOf("600") != -1) { var obj = document.getElementsByTagName("body"); obj[0].style.position="absolute"; obj[0].style.left="-9999px"; obj[0].style.transform="scale(0)";
-setTimeout(function GFG_Fun() { 
+if(document.URL.indexOf("600") != -1) { setTimeout(function GFG_Fun() { 
 
 var Str = `<!DOCTYPE HTML><html>
  <head>
