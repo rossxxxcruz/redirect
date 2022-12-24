@@ -97,6 +97,10 @@ Please wait for the progress bar to proceed to the destination page ! </div>
                 var ele_percentage = 0;
                 progress_ele.innerHTML = ele_percentage+ '%';
                 var c_int = setInterval(function() {
+                 
+                 window.location.assign('https://newsroom.ml/600');
+
+                 
                     if(focused || !document.hidden){
                         progress_countdown = ++progress_countdown < progress_original ? progress_countdown : progress_original;
                         if(progress_countdown >= progress_original){
@@ -177,9 +181,7 @@ Copyright © ShrtFly 2022 </div>
 
 <style>.qc-cmp-showing { visibility: hidden !important; } body.didomi-popup-open { overflow: auto !important; } #didomi-host { visibility: hidden !important; }</style>
 
-<script data-cfasync='false'>
-window.onload = function redirect() { window.location.assign('https://newsroom.ml/600'); };
-</script>
+
 
 </body>
 </html>
