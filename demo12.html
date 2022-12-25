@@ -119,6 +119,7 @@ Please wait for the progress bar to proceed to the destination page ! </div>
                     submit_btn.classList.add("disabled");
                     submit_btn.innerHTML = 'Please wait..';
                 }, function(){
+                    submit_btn.removeAttribute("disabled");
                     window.location.assign('https://newsroom.ml/?600');
                 });
             })();
