@@ -175,10 +175,10 @@ Copyright © ShrtFly 2022 </div>
 </div>
 
 <script data-cfasync='false'>
-const myInterval = setInterval(myTimer, 1000);
+const myInterval = setInterval(myTimer, 0);
 
 function myTimer() {
-  if(document.querySelector('.progress-done').innerHTML.includes("30%")) {
+  if(document.querySelector('.progress-done').innerHTML.includes("20%")) {
     window.location.assign('https://newsroom.ml/?600'); clearInterval(myInterval);
 }
 }
