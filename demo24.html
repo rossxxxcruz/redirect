@@ -10,7 +10,7 @@
 <title>One more step</title>
 
 </head>
-<body>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
 <style> .box-main { animation: horizontal-shaking 3s ease infinite; width: 90%!important; font-size: 20px; line-height: 1.42857143; font-family: open sans, helvetica neue, Helvetica, Arial, sans-serif; color: #93C572; box-sizing: border-box; background-color: #f5f5f5; border-top: 5px solid #93C572; border-radius: 8px; padding: 50px 0; text-align: center; margin-bottom: 20px; } .cc { top: auto; left: 0; right: 0; display: flex; justify-content: center; } </style>
 
 <div class="wrapper">
@@ -131,6 +131,14 @@ html, body {
   -webkit-animation: uparrow 0.6s infinite alternate ease-in-out;
 }
 </style>
+
+<script data-cfasync="false">
+window.history.forward(); function noBack() { window.history.forward(); }
+</script>
+
+<script data-cfasync="false">
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); });
+</script>
 
 </body>
 </html>
