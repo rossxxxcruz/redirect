@@ -79,28 +79,19 @@
 
 </style>
 <center>
-<div class="alert alert-light mt-1 captcha-check" style="font-family: 'Open Sans',sans-serif;font-size: medium;margin-top: 0rem!important;" role="alert"><strong>You are currently on step <span class="text-danger">2/2</span>.</strong></div>
-<div id="yoshare_unibot1_336x280_300x250_a_tag"></div>
-<div style="margin-top: 15px;"> </div>
-<div class="yuidea-top text-center">
-<div id="yuidea-wait1">
-<span id="countdown" class="countdown">
-
+<div class="alert alert-light mt-1 captcha-check" style="font-family: 'Open Sans',sans-serif;font-size: medium;margin-top: 0rem!important;" role="alert">
+<strong>You are currently on step <span class="text-danger">2/2</span>.</strong></div>
 Please wait <span id="yuidea-time" class="yuidea-time">10</span> seconds</span>
-</div>
 <div style="margin-top: 17px;"> </div>
-<div id="pf-6275ceb6ad47450027165905"></div>
-<div style="margin-top: 22px;"> </div>
 <div class="display">
-<button id="link" class="btn btn-primary" style="background-color: #007bff;color: #fff;border-width: 0;cursor: not-allowed;border-radius: 4px;text-transform: none;font-size: 18px;font-family: Nunito;font-weight: 700;letter-spacing: normal;padding: .575rem .90rem;line-height: 1.5;height: auto;transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;" disabled="disabled">Please wait...<div></div><div></div><div></div><div></div></button>
+<button id="link" class="btn btn-primary" style="background-color: #007bff;color: #fff;border-width: 0;cursor: not-allowed;border-radius: 4px;text-transform: none;font-size: 18px;font-family: Nunito;font-weight: 700;letter-spacing: normal;padding: .575rem .90rem;line-height: 1.5;height: auto;transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;" disabled="disabled">Please wait...</button>
 </div>
 <div id="yuidea-generate">
 <a class="btn btn-primary" style="border-radius: 4px;text-transform: none;font-size: 18px;font-family: Nunito;font-weight: 700;color: #ffffff;letter-spacing: normal;padding: .575rem .90rem;line-height: 1.5;height: auto;transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;" href="#yuidea-snp">Continue</a>
 </div>
-</div>
 </center>
 
-<script type="text/javascript"> 
+<script data-cfasync="false"> 
 var count= 10;
   var counter=setInterval(timer, 1000);
   function timer(){
@@ -108,14 +99,12 @@ var count= 10;
     if (count <= -1){
      document.getElementById('yuidea-generate').style.display='block';
       document.getElementById('yuidea-snp').style.display='block';
-      document.getElementsByClassName('display').style.display='none!important';
+      document.getElementsByClassName('display').style.visibility='hidden';
       clearInterval(counter);
       return;
     }
     document.getElementById("yuidea-time").innerHTML=count;
   }
 </script>
-
-	
-	
-	</body></html>
+</body>
+</html>
