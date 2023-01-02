@@ -97,9 +97,6 @@ Please wait <span id="yuidea-time" class="yuidea-time">10</span> seconds</span>
 <div id="yuidea-generate">
 <a class="btn btn-primary" style="border-radius: 4px;text-transform: none;font-size: 18px;font-family: Nunito;font-weight: 700;color: #ffffff;letter-spacing: normal;padding: .575rem .90rem;line-height: 1.5;height: auto;transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;" href="#yuidea-snp">Continue</a>
 </div>
-<div style="margin-top: 10px;"> </div>
-<div id="pf-62d13f862c46ce00288574ba"></div>
-<div style="margin-top: 20px;"> </div>
 </div>
 </center>
 
@@ -109,8 +106,9 @@ var count= 10;
   function timer(){
     count=count-1;
     if (count <= -1){
-      document.getElementById('yuidea-generate').style.display='block';
-      document.getElementById('yuidea-generate').innerText='Get Link';
+     document.getElementById('yuidea-generate').style.display='block';
+      document.getElementById('yuidea-snp').style.display='block';
+      document.getElementsByClassName('display').style.display='none!important';
       clearInterval(counter);
       return;
     }
