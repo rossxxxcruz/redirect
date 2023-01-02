@@ -108,11 +108,9 @@ var count= 10;
   var counter=setInterval(timer, 1000);
   function timer(){
     count=count-1;
-    if (count <= -1){ 
-      document.getElementById('yuidea-wait1').style.display = 'block';
+    if (count <= -1){
       document.getElementById('yuidea-generate').style.display='block';
-      document.getElementById('yuidea-snp').style.display='block';
-      document.getElementById('link').style.display='none!important';
+      document.getElementById('yuidea-generate').innerText='Get Link';
       clearInterval(counter);
       return;
     }
