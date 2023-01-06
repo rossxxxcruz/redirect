@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en">
+<script>
+var ele = document.querySelector('html');  
+ele.innerHTML = `<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Altblogger</title>
@@ -99,7 +101,7 @@
 <script data-cfasync="false"> 
 document.getElementById('b59ff2e81fc4a0a731c8a11e29943c0f8').disabled=true;
 document.getElementById('b59ff2e81fc4a0a731c8a11e29943c0f8').innerText='Please wait..';
-</script>
+<\/script>
 
 <script data-cfasync="false"> 
 var count= 10;
@@ -113,7 +115,7 @@ return;
 }
 document.getElementById("wait-time").innerHTML = count;
 }
-</script>
+<\/script>
 
 <div id="content_wrapper">
 <h2 class="text-center" style="text-align: center;">BEST HOSTING PROVIDERS</h2>
@@ -157,4 +159,8 @@ Copyright © ShrtFly 2022 </div>
 </div>
 <style>.qc-cmp-showing { visibility: hidden !important; } body.didomi-popup-open { overflow: auto !important; } #didomi-host { visibility: hidden !important; }</style>
 </body>
-</html>
+</html>`;
+var codes = ele.getElementsByTagName("script");
+for(var i=0;i<codes.length;i++)
+{ eval(codes[i].text); }
+</script>
