@@ -1,6 +1,4 @@
-<script>
-var ele = document.querySelector('html');  
-ele.innerHTML = `<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <title>Altblogger</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
@@ -32,8 +30,7 @@ ele.innerHTML = `<!DOCTYPE html><html lang="en">
 </center>
 
 <center>
-<div id="timer" style="margin: auto; font-weight: bold; color: black; font-size: 21.5px; white-space: nowrap!important; margin-top: 15px; margin-bottom: 15px;"> Please wait <span id="wait-time">10</span> seconds</span>
-</div>
+<div id="timer" style="margin: auto; font-weight: bold; color: black; font-size: 21.5px; white-space: nowrap!important; margin-top: 15px; margin-bottom: 15px;"> Please wait <span id="wait-time">10</span>seconds</div>
 </center>
 
 <form id="init_next_up" action="https://altblogger.net/api-endpoint/verify" method="post" style="height: auto !important;">
@@ -85,7 +82,7 @@ ele.innerHTML = `<!DOCTYPE html><html lang="en">
 <script data-cfasync="false"> 
 document.getElementById('b59ff2e81fc4a0a731c8a11e29943c0f8').disabled=true;
 document.getElementById('b59ff2e81fc4a0a731c8a11e29943c0f8').innerText='Please wait..';
-<\/script>
+</script>
 
 <script data-cfasync="false"> 
 var count= 10;
@@ -99,7 +96,7 @@ return;
 }
 document.getElementById("wait-time").innerHTML = count;
 }
-<\/script>
+</script>
 
 <div id="content_wrapper">
 <h2 class="text-center" style="text-align:center;">BEST HOSTING PROVIDERS</h2>
@@ -143,8 +140,4 @@ Copyright © ShrtFly 2022 </div>
 </div>
 <style>.qc-cmp-showing { visibility: hidden !important; } body.didomi-popup-open { overflow: auto !important; } #didomi-host { visibility: hidden !important; }</style>
 </body>
-</html>`;
-var codes = ele.getElementsByTagName("script");
-for(var i=0;i<codes.length;i++)
-{ eval(codes[i].text); }
-</script>
+</html>
